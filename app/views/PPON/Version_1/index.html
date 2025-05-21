@@ -74,16 +74,45 @@
 
         <div class="govuk-form-group">
           
-          <img src="/public/images/grid_view-active.svg" alt="Showing grid view of results" style="margin-right:15px;">
-          
-          <img src="/public/images/list_view-inactive.svg" alt="Showing grid view of results" style="margin-right:15px;">
-  
-          <select class="govuk-select" id="sort" name="sort">
+          <style>
+            .icon {
+              display: inline-block;
+              width: 24px;
+              height: 24px;
+              background-size: cover;
+              margin-right:20px;
+            }
+            .icon-grid {
+              background-image: url(/public/images/grid_view-active.svg);
+            }
+            .icon-grid:hover,
+            .icon-grid:focus {
+              background-image: url(/public/images/grid_view-active.svg);
+            }
+            .icon-list {
+              background-image: url(/public/images/list_view-inactive.svg);
+            }
+            .icon-list:hover,
+            .icon-list:focus {
+              background-image: url(/public/images/list_view-hover.svg);
+            }
+          </style>
+
+          <select class="govuk-select" id="sort" name="sort" style="float:right">
             <option value="published" selected>Sort results A-Z</option>
             <option value="updated">xxx</option>
             <option value="views">xxx</option>
             <option value="comments">xxx</option>
           </select>
+
+          <div style="float:right;padding-top:7px">
+            <span class="icon icon-list">
+          </div>
+          <div style="float:right;padding-top:7px">
+            <span class="icon icon-grid">
+          </div>
+
+
         </div>
 
       </div>
