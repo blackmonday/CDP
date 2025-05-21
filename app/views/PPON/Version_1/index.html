@@ -8,7 +8,10 @@
 
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
-<div class="govuk-width-container">
+<!--                                   -->
+<!--                                   -->
+<!-- BREADCRUMBS AND LANGUAGE SELECTOR -->
+ <div class="govuk-width-container">
   <main class="govuk-main-wrapper govuk-!-padding-top-0 govuk-!-padding-bottom-0" style="margin-top:-15px;margin-bottom:-15px">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-half">
@@ -28,7 +31,7 @@
     <!--                  -->
     <!-- BLUE PAGE HEADER -->
     <div class="govuk-grid-row govuk-!-padding-top-4">
-      <div class="govuk-grid-column-full govuk-!-padding-top-7 govuk-!-padding-bottom-2 govuk-!-margin-left-2" style="background-color:#1d70b8;color:#ffffff;">
+      <div class="govuk-grid-column-full govuk-!-padding-top-7 govuk-!-padding-bottom-5 govuk-!-margin-left-2 govuk-!-padding-left-7" style="background-color:#1d70b8;color:#ffffff;">
         <h1 class="govuk-heading-l govuk-!-margin-bottom-3" style="color:#ffffff">{{ serviceName}}</h1>
         <p class="govuk-body govuk-!-margin-bottom-0" style="color:#ffffff">The best place to find government services and information</p>
         <p class="govuk-body govuk-!-margin-top-0 govuk-!-font-weight-bold" style="color:#ffffff">Simpler, clearer, faster</p>
@@ -43,7 +46,7 @@
 
         <div class="govuk-inset-text">
           <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">PPON</p>
-          <p class="govuk-body">Search titles, descriptions, identifiers and organisation names</p>
+          <p class="govuk-body">The Public Procurement organisation number is a unique identifier for registered organisations.</p>
 
           <details class="govuk-details">
             <summary class="govuk-details__summary">
@@ -63,13 +66,31 @@
 
     <!--                             -->
     <!--                             -->
-    <!-- RESULTS HEADER - FULL WIDTH -->
+    <!-- RESULTS HEADER (FULL WIDTH) -->
     <div class="govuk-grid-row">
 
       <div class="govuk-grid-column-one-half">
         <h1 class="govuk-heading-l">Results</h1>
       </div>
 
+      <!--                           -->
+      <!--                           -->
+      <!-- SELECT WITH VIEW SELECTOR -->
+       <div class="govuk-grid-column-one-half" style="text-align: right;padding-right:0">
+        <div class="govuk-form-group">
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published" selected>Sort results A-Z</option>
+            <option value="updated">xxx</option>
+            <option value="views">xxx</option>
+            <option value="comments">xxx</option>
+          </select>
+        </div>
+      </div>
+
+      <!--                           -->
+      <!--                           -->
+      <!-- SELECT WITH VIEW SELECTOR -->
+       <!--
       <div class="govuk-grid-column-one-half" style="text-align: right;padding-right:0">
 
         <div class="govuk-form-group">
@@ -116,6 +137,7 @@
         </div>
 
       </div>
+      -->
       
     </div>
 
@@ -128,9 +150,9 @@
           
     </div>
 
-    <!--             -->
-    <!--             -->
-    <!-- LIST STARTS -->
+    <!--                         -->
+    <!--                         -->
+    <!-- LIST STARTS (2-COLUMNS) -->
     <div class="govuk-width-container">
       <main class="govuk-main-wrapper" style="padding-top:30px">
 
@@ -212,9 +234,9 @@
               }
             </style>
 
-            <!--                   -->
-            <!--                   -->
-            <!-- ORGANISATION TYPE -->
+            <!--                              -->
+            <!--                              -->
+            <!-- FILTER FOR ORGANISATION TYPE -->
             <button class="accordion govuk-body govuk-!-font-weight-bold">Organisation type</button>
             <div class="panel">
               <div class="govuk-form-group" style="margin-bottom:20px">
@@ -239,6 +261,7 @@
 
                     <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
 
+                    <!--
                     <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
                       <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
                       <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
@@ -254,6 +277,7 @@
                         SME
                       </label>
                     </div>
+                    -->
 
                   </div>
                 </fieldset>
@@ -345,7 +369,7 @@
             {% for org in data['organisations'] %}
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
-                  <h2 class="govuk-heading-m"><a href="#">{{org.name}}</a></h2>
+                  <h2 class="govuk-heading-m"><a href={{ org.url }}>{{org.name}}</a></h2>
                 </div>
                 <div class="govuk-grid-column-one-third">
                   <div class="govuk-grid-row" style="text-align: right;">
