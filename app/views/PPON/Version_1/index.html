@@ -37,7 +37,7 @@
       <!--                  -->
       <!-- BLUE PAGE HEADER -->
       <div class="govuk-grid-column-full" style="background-color:#1d70b8;color:#ffffff;padding:30px 30px 15px 30px;margin-top:30px">
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-3" style="color:#ffffff">Public Procurement organisation number register</h1>
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-3" style="color:#ffffff">Public procurement organisation number register</h1>
         <p class="govuk-body govuk-!-margin-bottom-0" style="color:#ffffff">The best place to find government services and information</p>
         <p class="govuk-body govuk-!-margin-top-0 govuk-!-font-weight-bold" style="color:#ffffff">Simpler, clearer, faster</p>
       </div>
@@ -45,24 +45,22 @@
       <!--            -->
       <!--            -->
       <!-- INSET TEXT -->
-      <div class="govuk-grid-column-full">
+      <div class="govuk-grid-column-full govuk-!-margin-top-7 govuk-!-margin-bottom-4">
 
-        <div class="govuk-inset-text">
-          <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">PPON</p>
-          <p class="govuk-body">The Public Procurement organisation number is a unique identifier for registered organisations.</p>
+        <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Public procurement organisation number (PPON)</p>
+        <p class="govuk-body">A public procurement organisation number (PPON) is a unique identifier assigned to organisations that participate in public procurement. It is used to manage and publish notices related to public procurement and connects information about the organisation digitally.</p>
 
-          <details class="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                More details on PPON
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-              Content to be confirmed.
-            </div>
-          </details>
+        <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">How is PPON different to a Companies House number?</p>
+        <p class="govuk-body">A Companies House number is a unique identifier assigned to limited companies and LLPs when they register with Companies House. Whilst PPON is also a unique identifier, it is used for organisations involved in public procurement activities.</p>
 
-        </div>
+
+        <!--<div class="govuk-inset-text">
+          <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Public procurement organisation number (PPON)</p>
+          <p class="govuk-body">A public procurement organisation number (PPON) is a unique identifier assigned to organisations that participate in public procurement. It is used to manage and publish notices related to public procurement and connects information about the organisation digitally.</p>
+
+          <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">How is PPON different to a Companies House number?</p>
+          <p class="govuk-body">A Companies House number is a unique identifier assigned to limited companies and LLPs when they register with Companies House. Whilst PPON is also a unique identifier, it is used for organisations involved in public procurement activities.</p>
+        </div>-->
 
       </div>
 
@@ -81,9 +79,10 @@
           <div class="govuk-form-group">
             <select class="govuk-select" id="sort" name="sort">
               <option value="published" selected>Sort results A-Z</option>
-              <option value="updated">xxx</option>
-              <option value="views">xxx</option>
-              <option value="comments">xxx</option>
+              <option value="updated">Sort results Z-A</option>
+              <option value="views">Sort by organisation type</option>
+              <option value="views">Sort by PPON number</option>
+              <option value="comments">Sort by PPON registration date</option>
             </select>
           </div>
         </div>
@@ -169,12 +168,17 @@
                       Help with keyword search
                     </span>
                   </summary>
-                  <div class="govuk-details__text">
+                  <div class="govuk-details__text" style="padding-bottom:1px">
                     <ul class="govuk-list govuk-list--bullet">
+                      <li>To search for any word, put a space between words. For example, <i>radio television</i></li>
+                      <li>To search for all words, put a + between words. For example, <i>administration + defence</i></li>
+                      <li>To search for an exact phrase, use quotes. For example, <i>"market research"</i></li>
+                    </ul>
+                    <!--<ul class="govuk-list govuk-list--bullet">
                       <li>To search for <span class="govuk-body govuk-!-font-weight-bold">any</span> word, put a <span class="govuk-body govuk-!-font-weight-bold">space</span> between words. For example, <span class="govuk-body govuk-!-font-weight-bold"><i>radio television</i></span></li>
                       <li>To search for <span class="govuk-body govuk-!-font-weight-bold">all</span> words, put a <span class="govuk-body govuk-!-font-weight-bold">+</span> between words. For example, <span class="govuk-body govuk-!-font-weight-bold"><i>administration + defence</i></span></li>
                       <li>To search for an <span class="govuk-body govuk-!-font-weight-bold">exact</span> phrase, use <span class="govuk-body govuk-!-font-weight-bold">quotes</span>. For example, <span class="govuk-body govuk-!-font-weight-bold"><i>"market research"</i></span></li>
-                    </ul>
+                    </ul>-->
                   </div>
                 </details>
 
@@ -240,10 +244,13 @@
                   <fieldset class="govuk-fieldset">
                     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
 
+                      <!-- BUYER -->
+                      <h4 class="govuk-heading-s" style="margin-bottom:10px">Buyer</h4>
+
                       <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
                         <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Supplier
+                          Central
                         </label>
                       </div>
 
@@ -252,9 +259,47 @@
                       <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
                         <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                          Buyer
+                          Sub-central
                         </label>
                       </div>
+
+                      <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
+
+                      <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
+                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                          Other
+                        </label>
+                      </div>
+
+                      <!-- SUPPLIER -->
+                      <h4 class="govuk-heading-s" style="margin-top:20px; margin-bottom:10px">Supplier</h4>
+
+                      <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          MCSE
+                        </label>
+                      </div>
+
+                      <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
+
+                      <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
+                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                          SME
+                        </label>
+                      </div>
+
+                      <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
+
+                      <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
+                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                          Other
+                        </label>
+                      </div>
+
 
                       <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
 
@@ -383,7 +428,9 @@
                   <div class="govuk-grid-column-full">
                     <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold govuk-!-padding-top-4">Organisation type</span>&nbsp;  {{org.type}}</p>
                     <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">PPON number</span>&nbsp; {{org.PPON_number}}</p>
-                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">Date of registration</span>&nbsp; {{ org.date_of_registration}}</p>
+                    <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">PPON registration date</span>&nbsp; {{ org.date_of_registration}}</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">Organisation address</span>&nbsp; {{ org.address}}</p>
+
 
                     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
