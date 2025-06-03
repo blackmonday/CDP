@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Buyer-Parent Child
+    </h1>
+
+    <h2 class="govuk-heading-l">Design prototypes</h2>
+
+    <h3 class="govuk-heading-m">Version 1 - current version</h3>
+
+    {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+    {{ govukWarningText({
+      text: "This prototype is currently being built and not ready to view.",
+      iconFallbackText: "Please note"
+    }) }}
+
+    <a class="govuk-button" href="/buyer-parent-child/Version_1/index.html">View prototype</a>
+
+    <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-3">Change log</p>
+
+    <p class="govuk-body-s govuk-!-font-weight-bold govuk-!-margin-bottom-1">3 June 2025</p>
+    <ul class="govuk-body-s govuk-list govuk-list--bullet">
+      <li>Initial prototype foundation framework created</li>
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}
