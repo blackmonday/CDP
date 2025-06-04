@@ -85,6 +85,24 @@
 
           <h3 class="govuk-heading-m govuk-!-padding-top-5">Child organisations</h3>
           <p class="govuk-body">A child organisation is a smaller branch or division of a larger organisation. Only a parent organisation can add a child....</p>
+          {% if data['child-added'] == "yes" %}
+
+
+
+            <table class="govuk-table">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-!-width-one-third"><a href="#">[Child Organisation Name]</a></td>
+                  <td class="govuk-table__cell govuk-!-width-one-third">[Child Organisation full address]</td>
+                  <td class="govuk-table__cell govuk-!-width-one-third" style="text-align: right;"><a href="remove-child-organisation">Remove</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+
+
+
+          {% endif %}
           <p class="govuk-body"><a class="govuk-link" href="add-a-child-organisation">Add a child organisation</a></p>
 
           <h3 class="govuk-heading-m govuk-!-padding-top-8">Other</h3>

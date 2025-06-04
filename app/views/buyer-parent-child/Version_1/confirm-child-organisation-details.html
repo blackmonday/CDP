@@ -35,37 +35,38 @@
         <!-- LEFT COL START -->
         <div class="govuk-grid-column-two-thirds">
 
-          <h1 class="govuk-heading-l">Search results</h1>
+          <h1 class="govuk-heading-l">Confirm child organisation details</h1>
 
-          <!--<div class="govuk-inset-text govuk-!-margin-top-0">2 child organisation found for <span class="govuk-!-font-weight-bold">[Search Results]</span></div>-->
-          <p class="govuk-body govuk-!-margin-top-0">2 child organisation found for <span class="govuk-!-font-weight-bold">[Search Results]</span></p>
+          <div style="border:solid 1px #b1b4b6; background-color:#f3f2f1;padding:20px 20px 0px 20px; margin-bottom:0">
+            <p class="govuk-body govuk-!-font-weight-bold">[Child Organisations Name]</p>
+          </div>
+          <div style="border:solid 1px #b1b4b6; border-top:none; background-color:#ffffff;padding:20px 20px 0px 20px; margin-bottom:30px">
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                <h1 class="govuk-fieldset__heading">
-                  Select a child organisation
-                </h1>
-              </legend>
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-                    [Child Organisation One]
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-                    [Child Organisation Two]
-                  </label>
-                </div>
-              </div>
-            </fieldset>
+            <table class="govuk-table">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header govuk-!-width-one-third">Companies House number</th>
+                  <td class="govuk-table__cell govuk-!-width-two-thirds">9876277</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header govuk-!-width-one-third">Organisation type</th>
+                  <td class="govuk-table__cell govuk-!-width-two-thirds">Limited company</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header govuk-!-width-one-third">Organisation address</th>
+                  <td class="govuk-table__cell govuk-!-width-two-thirds">17 Neptune Close<br/>Cosmos Park<br/>Galaxshire<br/>ZX9 8XY<br/>United Kingdom</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header govuk-!-width-one-third" style="border:none">Organisation email</th>
+                  <td class="govuk-table__cell govuk-!-width-two-thirds" style="border:none">info@randomlimited.co.uk</td>
+                </tr>
+              </tbody>
+            </table>
+
           </div>
 
           <div class="govuk-button-group">
-            <a class="govuk-button" href="confirm-child-organisation-details">Confirm</a>
+            <a class="govuk-button" href="success?child-added=yes">Confirm</a>
             <a class="govuk-button govuk-button--secondary" href="add-a-child-organisation">Search again</a>
             <a class="govuk-link" href="index">Cancel</a>
           </div>
