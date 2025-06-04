@@ -14,7 +14,7 @@
       <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
         <ol class="govuk-breadcrumbs__list">
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="index">Home</a>
+            <a class="govuk-breadcrumbs__link" href="javascript:history.back()">Home</a>
           </li>
           <li class="govuk-breadcrumbs__list-item">
             <a class="govuk-body-s" href="#" style="color:#0b0c0c;text-decoration: none;">Organisation Name</a>
@@ -36,7 +36,7 @@
       {% for orgOne in data['Organisation One'] %}
 
       <strong class="govuk-tag govuk-tag--turquoise" style="margin-top:0;margin-bottom:10px;">
-        {{orgOne.type_tag}}
+        {{orgOne.tag}}
       </strong>
 
       <h1 class="govuk-heading-l">
@@ -46,7 +46,7 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full govuk-!-padding-bottom-6">
 
-          <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold govuk-!-padding-top-4">Organisation type</span>&nbsp;  {{orgOne.type}}</p>
+          <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold govuk-!-padding-top-4">Organisation type</span>&nbsp;  {{orgOne.org_type}}</p>
           <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">PPON number</span>&nbsp; {{orgOne.PPON_number}}</p>
           <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">PPON registration date</span>&nbsp; {{ orgOne.date_of_registration}}</p>
           <p class="govuk-body"><span class="govuk-!-font-weight-bold">Address</span>&nbsp; {{ orgOne.address}}</p>
