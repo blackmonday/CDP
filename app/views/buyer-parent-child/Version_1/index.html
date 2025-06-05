@@ -84,13 +84,43 @@
           </table>
 
           <h3 class="govuk-heading-m govuk-!-padding-top-5">Child organisations</h3>
-          <p class="govuk-body">A child organisation is a smaller branch or division of a larger organisation. Only a parent organisation can add a child....</p>
+
+          <!--
+          <h3 class="govuk-heading-s">Parent and child organisations</h3>
+          <p class="govuk-body">Public sector organisations are linked in a group structure. This hierarchy structure connects government organisations together and makes it easier to report on spending and contracts.</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>A parent organisation acts as the lead member of a group of linked organisations. They oversee and support linked organisations that report to them. For example, government department, local authority, or another public sector body</li>
+            <li>A child organisation reports into a parent. For example, it could run a local programme or manage a specific area of work</li>
+            <li>Only a parent organisation can add child organisations</li>
+          </ul>
+          -->
+
+
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Parent and child organisations
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p class="govuk-body">Public sector organisations are linked in a group structure. This hierarchy structure connects government organisations together and makes it easier to report on spending and contracts.</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>A parent organisation acts as the lead member of a group of linked organisations. They oversee and support linked organisations that report to them. For example, government department, local authority, or another public sector body</li>
+                <li>A child organisation reports into a parent. For example, it could run a local programme or manage a specific area of work</li>
+                <li>Only a parent organisation can add child organisations</li>
+              </ul>
+            </div>
+          </details>
+
+
+
+
           {% if data['child-added'] == "yes" %}
             <table class="govuk-table govuk-!-margin-bottom-3">
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell govuk-!-width-one-third"><a href="#">[Child Organisation Name]</a></td>
-                  <td class="govuk-table__cell govuk-!-width-one-third">[Child Organisation full address]</td>
+                  <td class="govuk-table__cell govuk-!-width-one-third">123 Street Name<br/>Example Town<br/>Example County<br/>AB1 2CD<br/>United Kingdom</td>
                   <td class="govuk-table__cell govuk-!-width-one-third" style="text-align: right;"><a href="remove-child-organisation">Remove</a></td>
                 </tr>
               </tbody>

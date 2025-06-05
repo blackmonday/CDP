@@ -12,3 +12,7 @@ router.get('/', function(req, res) {
     req.session.data = {}
     res.render('index')
 })
+
+router.post('search-results', function(req, res) {
+    req.session.data['search-query'] = 'xxx'
+})
