@@ -86,7 +86,7 @@
           <h3 class="govuk-heading-m govuk-!-padding-top-5">Child organisations</h3>
           <p class="govuk-body">A child organisation is a smaller branch or division of a larger organisation. Only a parent organisation can add a child....</p>
           {% if data['child-added'] == "yes" %}
-            <table class="govuk-table">
+            <table class="govuk-table govuk-!-margin-bottom-3">
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                   <td class="govuk-table__cell govuk-!-width-one-third"><a href="#">[Child Organisation Name]</a></td>
@@ -95,12 +95,14 @@
                 </tr>
               </tbody>
             </table>
+            <p class="govuk-body"><a class="govuk-link" href="add-a-child-organisation">Add another child organisation</a></p>
+          {% else %}
+            <p class="govuk-body"><a class="govuk-link" href="add-a-child-organisation">Add a child organisation</a></p>
           {% endif %}
-          <p class="govuk-body"><a class="govuk-link" href="add-a-child-organisation">Add a child organisation</a></p>
 
-          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+          <!--<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">-->
 
-          <h3 class="govuk-heading-m govuk-!-padding-top-5">Other</h3>
+          <h3 class="govuk-heading-m govuk-!-padding-top-8">Other</h3>
 
           <p class="govuk-body govuk-!-margin-bottom-2"><a class="govuk-link" href="#">Manage API keys</a></p>
           <p class="govuk-body">Create an API key and share it with the e-Sender you use to publish procurement notices.</p>
