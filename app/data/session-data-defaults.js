@@ -67,4 +67,23 @@ module.exports = {
       address: "30 Guild Street, London, SE1 3SY"
     },
   ],
+  "Organisation Detail": [
+    {
+      name: "Organisation Nameeee",
+      PPON_number: "DRFI-1747-YZZC-EW",
+      companies_house_number: "0123456789",
+      registry: "Charity Commission for England and Wales",
+      registry_number: "9876543210",
+      email: "email@organisation.com",
+      address1: "17 Neptune Close",
+      address2: "Cosmos Park",
+      address_city: "Cityville",
+      address_county: " Galaxshire",
+      address_postcode: "ZX9 8XY",
+      address_country: "United Kingdom",
+      organisation_type: "Central government, public authority; UK, Scottish, Welsh and Northern Ireland Executive",
+      devolved_region: "Nothern Ireland",
+      data_sharing_agreement: "Agreed on 2 January 2025",
+    },
+  ],
 };

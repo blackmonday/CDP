@@ -40,7 +40,7 @@
           <h1 class="govuk-heading-m">Are you sure you want to remove this child organisation?</h1>
 
           <div style="border:solid 1px #b1b4b6; background-color:#f3f2f1;padding:20px 20px 0px 20px; margin-bottom:0">
-            <p class="govuk-body govuk-!-font-weight-bold">[Child Organisations Name]</p>
+            <p class="govuk-body govuk-!-font-weight-bold">[Child Organisations {{ data['search-query'] }} One]</p>
           </div>
           <div style="border:solid 1px #b1b4b6; border-top:none; background-color:#ffffff;padding:20px 20px 0px 20px; margin-bottom:30px">
 
@@ -56,11 +56,11 @@
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header govuk-!-width-one-third">Organisation address</th>
-                  <td class="govuk-table__cell govuk-!-width-two-thirds">17 Neptune Close<br/>Cosmos Park<br/>Galaxshire<br/>ZX9 8XY<br/>United Kingdom</td>
+                  <td class="govuk-table__cell govuk-!-width-two-thirds">123 Street Name<br/>Example Town<br/>Example County<br/>AB1 2CD<br/>United Kingdom</td>
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header govuk-!-width-one-third" style="border:none">Organisation email</th>
-                  <td class="govuk-table__cell govuk-!-width-two-thirds" style="border:none">info@randomlimited.co.uk</td>
+                  <td class="govuk-table__cell govuk-!-width-two-thirds" style="border:none">info@{{ data['search-query'] }}org.co.uk</td>
                 </tr>
               </tbody>
             </table>
