@@ -1,0 +1,822 @@
+Snippet 210525
+
+
+Snippet - 200525
+
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+
+  .govuk-accordion__section-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 19px;
+    color: #0b0c0c;
+    padding: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .arrow {
+    display: inline-block;
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    transition: transform 0.3s ease;
+  }
+
+  .arrow.open {
+    transform: rotate(180deg);
+    border-width: 0 4px 5px 4px;
+  }
+
+  #toggleParent .arrow {
+    border-color: #1d70b8 transparent transparent transparent;
+  }
+
+  #toggleParent .arrow.open {
+    border-color: transparent transparent #1d70b8 transparent;
+  }
+
+  #toggleInner1 .arrow, #toggleInner2 .arrow, #toggleInner3 .arrow, #toggleMiddleParent .arrow, #toggleMiddleInner .arrow, #toggleMiddleInner1 .arrow, #toggleRightParent .arrow, #toggleRightInner .arrow, #toggleRightInner1 .arrow, #toggleRightInner2 .arrow, #toggleRightInner3 .arrow, #toggleRightInner4 .arrow{
+    border-color: #1d70b8 transparent transparent transparent;
+  }
+
+  #toggleInner1 .arrow.open , #toggleInner2 .arrow.open , #toggleInner3 .arrow.open , #toggleMiddleParent .arrow.open , #toggleMiddleInner .arrow.open , #toggleMiddleInner1 .arrow.open, #toggleRightParent .arrow.open, #toggleRightInner .arrow.open, #toggleRightInner1 .arrow.open, #toggleRightInner2 .arrow.open, #toggleRightInner3 .arrow.open, #toggleRightInner4 .arrow.open {
+    border-color: transparent transparent #1d70b8 transparent;
+  }
+
+  .grey-box {
+    background-color: #f3f2f1;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  #toggleInner1, #toggleInner2, #toggleInner3 {
+    margin-bottom: 6px;
+  }
+
+  .white-box {
+    background-color: #ffffff;
+    padding: 8px 16px;
+    margin-top: 0px;
+    margin-left: -16px;
+    margin-right: -16px;
+    display: none;
+  }
+
+  .middle-white-box {
+    background-color: #ffffff;
+    padding: 8px 2px;
+    margin-top: 0px;
+    margin-left: -10px;
+    margin-right: -16px;
+    display: none;
+  }
+
+
+   .middle-white-box {
+    background-color: #ffffff;
+    padding: 8px 16px;
+    margin-top: 0px;
+    margin-left: -10px;
+    margin-right: -16px;
+    display: none;
+  }
+
+  .govuk-details {
+    margin-top: 16px;
+    margin-bottom: -8px;
+  }
+
+  .govuk-fieldset {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+
+  .white-box-padding {
+    padding-left: 16px;
+  }
+
+  .govuk-body-s {
+    margin-left: -8px
+  }
+
+   .govuk-heading-l {
+    margin-bottom: 16px
+  }
+
+  
+
+
+</style>
+
+<div class="govuk-width-container">
+
+  <div class="my-full-width-element">
+    <h1 class="govuk-heading-l">Search results</h1>
+    <form style="display: flex; gap: 10px; align-items: flex-end;"></form>
+      <div class="govuk-form-group">
+  </label>
+
+  <div style="display: flex; gap: 10px;">
+    <input class="govuk-input govuk-!-width-one-half" id="search" name="search" type="search">
+    <button class="govuk-button" data-module="govuk-button" type="submit">
+      Search
+    </button>
+  </div>
+</div>
+  <div class="govuk-inset-text">
+  Search titles, descriptions, identifiers and organisation names
+
+  <details class="govuk-details" style="margin-top: 20px;">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Help with keyword search
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+    </div>
+  </details>
+</div>
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<h1 class="govuk-heading-m">Selected filters</h1>
+<a href="/your-filter-page" class="govuk-link">Clear all filters</a>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  
+  <!-- Left Column -->
+  <div class="govuk-grid-column-one-third">
+    <!-- Parent Grey box toggle -->
+    <button class="govuk-accordion__section-header" aria-expanded="false" aria-controls="parent-grey-box" id="toggleParent">
+      <span class="arrow" aria-hidden="true"></span>
+      <span class="govuk-heading-s" style="margin: 0;">Commercial tool</span>
+    </button>
+
+    <div class="grey-box" id="parent-grey-box">
+
+      <!-- First inner grey box toggle -->
+      <button class="govuk-accordion__section-header" aria-expanded="false" aria-controls="inner-grey-box-1" id="toggleInner1">
+        <span class="arrow" aria-hidden="true"></span>
+        <span class="govuk-heading-s" style="margin: 0;">Commercial tool</span>
+      </button>
+      <div class="grey-box" id="inner-grey-box-1">
+        <h1 class="govuk-body-s">Search for commercial tools being established, modified or terminated</h1>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary govuk-body-s">
+            <span class="govuk-details__summary-text">
+              Definitions
+            </span>
+          </summary>
+          <div class="govuk-details__text govuk-body-s">
+            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+          </div>
+        </details>
+        <div class="white-box" id="white-box-1">
+          <div class="govuk-form-group white-box-padding">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"></legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">Standalone framework</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">Open framework</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-3">Dynamic market</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-4">Utilities dynamic market</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-5" name="organisation" type="checkbox" value="dps">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-5">Dynamic purchasing system</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-6" name="organisation" type="checkbox" value="qualification">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-6">Qualification system</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second inner grey box toggle -->
+      <button class="govuk-accordion__section-header" aria-expanded="false" aria-controls="inner-grey-box-2" id="toggleInner2">
+        <span class="arrow" aria-hidden="true"></span>
+        <span class="govuk-heading-s" style="margin: 0;">Status</span>
+      </button>
+
+      <div class="grey-box" id="inner-grey-box-2">
+        <div class="white-box" id="white-box-2">
+          <div class="govuk-form-group white-box-padding">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m"></legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="status-upcoming" name="status" type="checkbox" value="upcoming">
+                  <label class="govuk-label govuk-checkboxes__label" for="status-upcoming">Upcoming</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="status-active" name="status" type="checkbox" value="active">
+                  <label class="govuk-label govuk-checkboxes__label" for="status-active">Active</label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="status-expired" name="status" type="checkbox" value="expired">
+                  <label class="govuk-label govuk-checkboxes__label" for="status-expired">Expired</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third inner grey box toggle -->
+      <button class="govuk-accordion__section-header" aria-expanded="false" aria-controls="inner-grey-box-3" id="toggleInner3">
+        <span class="arrow" aria-hidden="true"></span>
+        <span class="govuk-heading-s" style="margin: 0;">Date range</span>
+      </button>
+
+      <div class="grey-box" id="inner-grey-box-3">
+        <h1 class="govuk-body-s">Commercial tools which were active or expired within a date range (searches submission deadline, contract start/end date, open framework end date and start/end date of the DM)</h1>
+        <div class="white-box" id="white-box-3">
+          <div class="govuk-form-group white-box-padding">
+            <details class="govuk-details">
+              <summary class="govuk-details__summary govuk-body-s">
+                <span class="govuk-details__summary-text">
+                  Submission deadline
+                </span>
+              </summary>
+              <div class="govuk-details__text govuk-body-s">
+                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+              </div>
+            </details>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  From
+                </legend>
+
+                <div id="passport-issued-hint" class="govuk-hint">
+                  For example, 27 3 2007
+                </div>
+
+                <div class="govuk-form-group">
+                  <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-third"></div>
+                    <div class="govuk-date-input" id="passport-issued" style="display: flex;">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">Day</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">Month</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">Year</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  To
+                </legend>
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-one-third">
+                    <div class="govuk-date-input" id="passport-issued" style="display: flex; gap: 10px;">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">Day</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">Month</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">Year</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <details class="govuk-details">
+              <summary class="govuk-details__summary govuk-body-s">
+                <span class="govuk-details__summary-text">
+                  Commercial tool dates
+                </span>
+              </summary>
+              <div class="govuk-details__text govuk-body-s">
+                We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+              </div>
+            </details>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  From
+                </legend>
+
+                <!-- Full-width hint above the 1/3-width input block -->
+                <div id="passport-issued-hint" class="govuk-hint">
+                  For example, 27 3 2007
+                </div>
+
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-one-third">
+                    <div class="govuk-date-input" id="passport-issued" style="display: flex; gap: 10px;">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">Day</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">Month</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">Year</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Middle Column -->
+  <div class="govuk-grid-column-one-third">
+   <!-- Middle Column Accordion -->
+  <button class="govuk-accordion__section-header" aria-expanded="false" aria-controls="middle-parent-grey-box" id="toggleMiddleParent">
+  <span class="arrow" aria-hidden="true"></span>
+  <span class="govuk-heading-s" style="margin: 0;">Contracting authority</span>
+  </button>
+
+  <div class="grey-box" id="middle-parent-grey-box">
+
+  <!-- Middle Inner Box -->
+  <button class="govuk-accordion__section-header" aria-expanded="false" aria-controls="middle-inner-grey-box" id="toggleMiddleInner">
+    <span class="arrow" aria-hidden="true"></span>
+    <span class="govuk-heading-s" style="margin: 0;">Status</span>
+  </button>
+
+  <div class="grey-box" id="middle-inner-grey-box">
+    <div class="white-box" id="middle-white-box">
+      <div class="govuk-form-group white-box-padding">
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="middle-option-1" name="middle-option" type="checkbox" value="1">
+            <label class="govuk-label govuk-checkboxes__label" for="middle-option-1">Can award</label>
+            <input class="govuk-checkboxes__input" id="middle-option-1" name="middle-option" type="checkbox" value="1">
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="middle-option-1" name="middle-option" type="checkbox" value="1">
+            <label class="govuk-label govuk-checkboxes__label" for="middle-option-1">Cannot award</label>
+            <input class="govuk-checkboxes__input" id="middle-option-1" name="middle-option" type="checkbox" value="1">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+   <button class="govuk-accordion__section-header" aria-expanded="false" aria-controls="middle-inner-grey-box-1" id="toggleMiddleInner1">
+      <span class="arrow" aria-hidden="true"></span>
+      <span class="govuk-heading-s" style="margin: 0;">Usage</span>
+    </button>
+
+    <div class="grey-box" id="middle-inner-grey-box-1">
+      <div class="white-box" id="middle-white-box-1">
+        <div class="govuk-form-group white-box-padding">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="middle-example-2" name="middle-example" type="checkbox" value="2">
+                <label class="govuk-label govuk-checkboxes__label" for="middle-example-2">Can be used by other contracting authorities</label>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="middle-example-2" name="middle-example" type="checkbox" value="2">
+                <label class="govuk-label govuk-checkboxes__label" for="middle-example-2">Cannot be used by other contracting authorities</label>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="middle-example-2" name="middle-example" type="checkbox" value="2">
+                <label class="govuk-label govuk-checkboxes__label" for="middle-example-2">Usage not specified</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- Right Column -->
+  <div class="govuk-grid-column-one-third">
+
+  <!-- Parent toggle -->
+  <button class="govuk-accordion__section-header" aria-expanded="false" aria-controls="right-parent-grey-box" id="toggleRightParent">
+    <span class="arrow" aria-hidden="true"></span>
+    <span class="govuk-heading-s" style="margin: 0;">Application</span>
+  </button>
+
+  <!-- Parent Grey Box -->
+  <div class="grey-box" id="right-parent-grey-box">
+
+    <!-- Inner Box 1 -->
+    <button class="govuk-accordion__section-header" aria-expanded="false" aria-controls="right-inner-grey-box" id="toggleRightInner">
+      <span class="arrow" aria-hidden="true"></span>
+      <span class="govuk-heading-s" style="margin: 0;">Supplier status</span>
+    </button>
+    <div class="grey-box" id="right-inner-grey-box">
+      <div class="white-box" id="right-white-box">
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="middle-option-1" name="middle-option" type="checkbox" value="1">
+            <label class="govuk-label govuk-checkboxes__label" for="middle-option-1">Can apply to join</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="middle-option-2" name="middle-option" type="checkbox" value="2">
+            <label class="govuk-label govuk-checkboxes__label" for="middle-option-2">Cannot apply to join</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <!-- Inner Box 2 -->
+  <button class="govuk-accordion__section-header" aria-expanded="false" aria-controls="right-inner-grey-box-1" id="toggleRightInner1">
+  <span class="arrow" aria-hidden="true"></span>
+  <span class="govuk-heading-s" style="margin: 0;">Award method</span>
+  </button>
+  <div class="grey-box" id="right-inner-grey-box-1">
+  <div class="white-box" id="right-white-box-1">
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="middle-option-1" name="middle-option" type="checkbox" value="1">
+        <label class="govuk-label govuk-checkboxes__label" for="middle-option-1">With competition</label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="middle-option-2" name="middle-option" type="checkbox" value="2">
+        <label class="govuk-label govuk-checkboxes__label" for="middle-option-2">Without competition</label>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Inner Box 3 -->
+  <button class="govuk-accordion__section-header" aria-expanded="false" aria-controls="right-inner-grey-box-2" id="toggleRightInner2">
+  <span class="arrow" aria-hidden="true"></span>
+  <span class="govuk-heading-s" style="margin: 0;">Fees</span>
+  </button>
+  <div class="grey-box" id="right-inner-grey-box-2">
+    <h1 class="govuk-body-s">Maximum percentage fees charges to suppliers</h1>
+  <div class="white-box" id="right-white-box-2">
+    
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="from-percent">From</label>
+      <input class="govuk-input govuk-input--width-5" id="from-percent" name="from-percent" type="number" min="0" max="100" step="any" aria-describedby="from-percent-hint">
+      <span class="govuk-hint" id="from-percent-hint">%</span>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="to-percent">To</label>
+      <input class="govuk-input govuk-input--width-5" id="to-percent" name="to-percent" type="number" min="0" max="100" step="any" aria-describedby="to-percent-hint">
+      <span class="govuk-hint" id="to-percent-hint">%</span>
+    </div>
+    <p class="govuk-body-m" style="margin-top: 0; margin-bottom: 8px;">Or</p>
+
+    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="small-checkbox-1" name="small-checkbox" type="checkbox" value="yes">
+        <label class="govuk-label govuk-checkboxes__label" for="small-checkbox-1">
+          No fees
+        </label>
+      </div>
+    </div>
+    </div>
+  </div>
+
+    <!-- Inner Box 4 -->
+  <button class="govuk-accordion__section-header" aria-expanded="false" aria-controls="right-inner-grey-box-3" id="toggleRightInner3">
+  <span class="arrow" aria-hidden="true"></span>
+  <span class="govuk-heading-s" style="margin: 0;">Contract location</span>
+  </button>
+  <div class="grey-box" id="right-inner-grey-box-3">
+  <div class="white-box" id="right-white-box-3">
+    <details class="govuk-details">
+      <summary class="govuk-details__summary govuk-body-s">
+        <span class="govuk-details__summary-text">
+          Definitions
+        </span>
+      </summary>
+      <div class="govuk-details__text govuk-body-s">
+        We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+      </div>
+    </details>
+  </div>
+  </div>
+
+  <!-- Inner Box 5 -->
+  <button class="govuk-accordion__section-header" aria-expanded="false" aria-controls="right-inner-grey-box-4" id="toggleRightInner4">
+  <span class="arrow" aria-hidden="true"></span>
+  <span class="govuk-heading-s" style="margin: 0;">Industry CPV code</span>
+  </button>
+  <div class="grey-box" id="right-inner-grey-box-4" style="display: none;">
+    <h1 class="govuk-body-s">The common procurement vocabulary (CPV) is used to classify contracts in a standardised way</h1>
+  <div class="white-box" id="right-white-box-4" style="display: none;">
+    <details class="govuk-details">
+      <summary class="govuk-details__summary govuk-body-s">
+        <span class="govuk-details__summary-text">Browse CPV</span>
+      </summary>
+      <div class="govuk-details__text govuk-body-s">
+        We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+      </div>
+    </details>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="govuk-button-group govuk-!-padding-top-4">
+  <button class="govuk-button" data-module="govuk-button">
+    Update
+  </button>
+  <a class="govuk-button govuk-button--secondary" href="#">
+    Reset
+  </a>
+</div>
+
+
+
+
+<div class="govuk-width-container" style="margin-top: 20px;">
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h1 class="govuk-heading-l" style="margin-bottom: 0;">Results</h1>
+
+    <div class="govuk-form-group" style="margin-bottom: 0;">
+      <label class="govuk-label" for="sort">
+        Sort results by
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="relevance">Relevance</option>
+        <option value="date">Date</option>
+        <option value="a-z">A-Z</option>
+      </select>
+    </div>
+  </div>
+</div>
+    <h1 class="govuk-body-m" style="margin-bottom: 0;">54 results</h1>
+
+
+
+
+
+
+
+
+
+<script>
+  // Parent toggle
+  const toggleParent = document.getElementById('toggleParent');
+  const parentGreyBox = document.getElementById('parent-grey-box');
+  const arrowParent = toggleParent.querySelector('.arrow');
+
+  toggleParent.addEventListener('click', () => {
+    const isExpanded = toggleParent.getAttribute('aria-expanded') === 'true';
+    toggleParent.setAttribute('aria-expanded', !isExpanded);
+    arrowParent.classList.toggle('open', !isExpanded);
+    parentGreyBox.style.display = isExpanded ? 'none' : 'block';
+  });
+
+  // Inner toggle 1
+  const toggleInner1 = document.getElementById('toggleInner1');
+  const innerGreyBox1 = document.getElementById('inner-grey-box-1');
+  const whiteBox1 = document.getElementById('white-box-1');
+  const arrowInner1 = toggleInner1.querySelector('.arrow');
+  const searchSentence = document.getElementById('searchSentence');
+
+  toggleInner1.addEventListener('click', () => {
+    const isExpanded = toggleInner1.getAttribute('aria-expanded') === 'true';
+    toggleInner1.setAttribute('aria-expanded', !isExpanded);
+    arrowInner1.classList.toggle('open', !isExpanded);
+    innerGreyBox1.style.display = isExpanded ? 'none' : 'block';
+    whiteBox1.style.display = isExpanded ? 'none' : 'block';
+    searchSentence.style.display = isExpanded ? 'block' : 'none';
+  });
+
+  // Inner toggle 2
+  const toggleInner2 = document.getElementById('toggleInner2');
+  const innerGreyBox2 = document.getElementById('inner-grey-box-2');
+  const whiteBox2 = document.getElementById('white-box-2');
+  const arrowInner2 = toggleInner2.querySelector('.arrow');
+
+  toggleInner2.addEventListener('click', () => {
+    const isExpanded = toggleInner2.getAttribute('aria-expanded') === 'true';
+    toggleInner2.setAttribute('aria-expanded', !isExpanded);
+    arrowInner2.classList.toggle('open', !isExpanded);
+    innerGreyBox2.style.display = isExpanded ? 'none' : 'block';
+    whiteBox2.style.display = isExpanded ? 'none' : 'block';
+  });
+
+  // Inner toggle 3
+  const toggleInner3 = document.getElementById('toggleInner3');
+  const innerGreyBox3 = document.getElementById('inner-grey-box-3');
+  const whiteBox3 = document.getElementById('white-box-3');
+  const arrowInner3 = toggleInner3.querySelector('.arrow');
+
+  toggleInner3.addEventListener('click', () => {
+    const isExpanded = toggleInner3.getAttribute('aria-expanded') === 'true';
+    toggleInner3.setAttribute('aria-expanded', !isExpanded);
+    arrowInner3.classList.toggle('open', !isExpanded);
+    innerGreyBox3.style.display = isExpanded ? 'none' : 'block';
+    whiteBox3.style.display = isExpanded ? 'none' : 'block';
+  });
+
+  // Middle Parent toggle
+  const toggleMiddleParent = document.getElementById('toggleMiddleParent');
+  const middleParentGreyBox = document.getElementById('middle-parent-grey-box');
+  const arrowMiddleParent = toggleMiddleParent.querySelector('.arrow');
+
+  toggleMiddleParent.addEventListener('click', () => {
+    const isExpanded = toggleMiddleParent.getAttribute('aria-expanded') === 'true';
+    toggleMiddleParent.setAttribute('aria-expanded', !isExpanded);
+    arrowMiddleParent.classList.toggle('open', !isExpanded);
+    middleParentGreyBox.style.display = isExpanded ? 'none' : 'block';
+  });
+
+  // Middle Inner toggle
+  const toggleMiddleInner = document.getElementById('toggleMiddleInner');
+  const middleInnerGreyBox = document.getElementById('middle-inner-grey-box');
+  const middleWhiteBox = document.getElementById('middle-white-box');
+  const arrowMiddleInner = toggleMiddleInner.querySelector('.arrow');
+
+  toggleMiddleInner.addEventListener('click', () => {
+    const isExpanded = toggleMiddleInner.getAttribute('aria-expanded') === 'true';
+    toggleMiddleInner.setAttribute('aria-expanded', !isExpanded);
+    arrowMiddleInner.classList.toggle('open', !isExpanded);
+    middleInnerGreyBox.style.display = isExpanded ? 'none' : 'block';
+    middleWhiteBox.style.display = isExpanded ? 'none' : 'block';
+  });
+const toggleMiddleInner1 = document.getElementById('toggleMiddleInner1');
+  const middleInnerGreyBox1 = document.getElementById('middle-inner-grey-box-1');
+  const middleWhiteBox1 = document.getElementById('middle-white-box-1');
+  const arrowMiddleInner1 = toggleMiddleInner1.querySelector('.arrow');
+
+  toggleMiddleInner1.addEventListener('click', () => {
+    const isExpanded = toggleMiddleInner1.getAttribute('aria-expanded') === 'true';
+    toggleMiddleInner1.setAttribute('aria-expanded', !isExpanded);
+    arrowMiddleInner1.classList.toggle('open', !isExpanded);
+    middleInnerGreyBox1.style.display = isExpanded ? 'none' : 'block';
+    middleWhiteBox1.style.display = isExpanded ? 'none' : 'block';
+  });
+
+  // Right Parent toggle
+  const toggleRightParent = document.getElementById('toggleRightParent');
+  const rightParentGreyBox = document.getElementById('right-parent-grey-box');
+  const arrowRightParent = toggleRightParent.querySelector('.arrow');
+
+  toggleRightParent.addEventListener('click', () => {
+    const isExpanded = toggleRightParent.getAttribute('aria-expanded') === 'true';
+    toggleRightParent.setAttribute('aria-expanded', !isExpanded);
+    arrowRightParent.classList.toggle('open', !isExpanded);
+    rightParentGreyBox.style.display = isExpanded ? 'none' : 'block';
+  });
+
+  // Right Inner toggle (Status)
+  const toggleRightInner = document.getElementById('toggleRightInner');
+  const rightInnerGreyBox = document.getElementById('right-inner-grey-box');
+  const rightWhiteBox = document.getElementById('right-white-box');
+  const arrowRightInner = toggleRightInner.querySelector('.arrow');
+
+  toggleRightInner.addEventListener('click', () => {
+    const isExpanded = toggleRightInner.getAttribute('aria-expanded') === 'true';
+    toggleRightInner.setAttribute('aria-expanded', !isExpanded);
+    arrowRightInner.classList.toggle('open', !isExpanded);
+    rightInnerGreyBox.style.display = isExpanded ? 'none' : 'block';
+    rightWhiteBox.style.display = isExpanded ? 'none' : 'block';
+  });
+
+  // Right Inner toggle (Usage)
+  const toggleRightInner1 = document.getElementById('toggleRightInner1');
+  const rightInnerGreyBox1 = document.getElementById('right-inner-grey-box-1');
+  const rightWhiteBox1 = document.getElementById('right-white-box-1');
+  const arrowRightInner1 = toggleRightInner1.querySelector('.arrow');
+
+  toggleRightInner1.addEventListener('click', () => {
+    const isExpanded = toggleRightInner1.getAttribute('aria-expanded') === 'true';
+    toggleRightInner1.setAttribute('aria-expanded', !isExpanded);
+    arrowRightInner1.classList.toggle('open', !isExpanded);
+    rightInnerGreyBox1.style.display = isExpanded ? 'none' : 'block';
+    rightWhiteBox1.style.display = isExpanded ? 'none' : 'block';
+  });
+
+  // Right Inner toggle (Additional section 2)
+  const toggleRightInner2 = document.getElementById('toggleRightInner2');
+  const rightInnerGreyBox2 = document.getElementById('right-inner-grey-box-2');
+  const rightWhiteBox2 = document.getElementById('right-white-box-2');
+  const arrowRightInner2 = toggleRightInner2.querySelector('.arrow');
+
+  toggleRightInner2.addEventListener('click', () => {
+    const isExpanded = toggleRightInner2.getAttribute('aria-expanded') === 'true';
+    toggleRightInner2.setAttribute('aria-expanded', !isExpanded);
+    arrowRightInner2.classList.toggle('open', !isExpanded);
+    rightInnerGreyBox2.style.display = isExpanded ? 'none' : 'block';
+    rightWhiteBox2.style.display = isExpanded ? 'none' : 'block';
+  });
+
+  // Right Inner toggle (Additional section 3)
+  const toggleRightInner3 = document.getElementById('toggleRightInner3');
+  const rightInnerGreyBox3 = document.getElementById('right-inner-grey-box-3');
+  const rightWhiteBox3 = document.getElementById('right-white-box-3');
+  const arrowRightInner3 = toggleRightInner3.querySelector('.arrow');
+
+  toggleRightInner3.addEventListener('click', () => {
+    const isExpanded = toggleRightInner3.getAttribute('aria-expanded') === 'true';
+    toggleRightInner3.setAttribute('aria-expanded', !isExpanded);
+    arrowRightInner3.classList.toggle('open', !isExpanded);
+    rightInnerGreyBox3.style.display = isExpanded ? 'none' : 'block';
+    rightWhiteBox3.style.display = isExpanded ? 'none' : 'block';
+  });
+
+
+  const toggleRightInner4 = document.getElementById('toggleRightInner4');
+  const rightInnerGreyBox4 = document.getElementById('right-inner-grey-box-4');
+  const rightWhiteBox4 = document.getElementById('right-white-box-4');
+  const arrowRightInner4 = toggleRightInner4.querySelector('.arrow');
+
+  toggleRightInner4.addEventListener('click', () => {
+    const isExpanded = toggleRightInner4.getAttribute('aria-expanded') === 'true';
+    toggleRightInner4.setAttribute('aria-expanded', !isExpanded);
+    arrowRightInner4.classList.toggle('open', !isExpanded);
+    rightInnerGreyBox4.style.display = isExpanded ? 'none' : 'block';
+    rightWhiteBox4.style.display = isExpanded ? 'none' : 'block';
+});
+  
+</script>
+
+
+
+{% endblock %}
+
