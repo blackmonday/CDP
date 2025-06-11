@@ -82,7 +82,7 @@ module.exports = {
       address_postcode: "AB1 2CD",
       address_country: "United Kingdom",
       organisation_type: "Central government, public authority; UK, Scottish, Welsh and Northern Ireland Executive",
-      devolved_region: "Nothern Ireland",
+      devolved_region: "Northern Ireland",
       data_sharing_agreement: "Agreed on 2 January 2025",
     },
   ],
