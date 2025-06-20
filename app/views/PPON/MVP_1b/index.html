@@ -14,7 +14,7 @@
       <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
         <ol class="govuk-breadcrumbs__list">
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="../../buyer-view/index.html">Home</a>
+            <a class="govuk-breadcrumbs__link" href="../../buyer-view/MVP_1a/index.html">Home</a>
           </li>
           <li class="govuk-breadcrumbs__list-item">
             <a class="govuk-breadcrumbs__link" href="#" style="color:#0b0c0c;text-decoration: none;">PPON</a>
@@ -36,19 +36,19 @@
       <!--                  -->
       <!--                  -->
       <!-- BLUE PAGE HEADER -->
-      <div class="govuk-grid-column-full">
+      <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l govuk-!-margin-bottom-3">Public procurement organisation number register</h1>
        
         <p class="govuk-body" style="margin-bottom:5px">Search by organisation name or PPON number</p>
 
         <style>
           #wrapper {
-            width:88%;
+            width:100%;
             overflow:hidden;
             border:10px solid #DEE0E2;
           }
           #first {
-            width:95%;
+            width: 93%;
             float:left;
           }
           #second {
@@ -155,23 +155,11 @@
       <!--            -->
       <!--            -->
       <!-- INSET TEXT -->
-      <div class="govuk-grid-column-full govuk-!-margin-top-3 govuk-!-margin-bottom-4">
+      <div class="govuk-grid-column-two-thirds govuk-!-margin-top-3 govuk-!-margin-bottom-4">
 
         <div class="govuk-inset-text">
           <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Public procurement organisation number (PPON)</p>
           <p class="govuk-body">A PPON is a unique identifier assigned to organisations that participate in public procurement. It is used to manage and publish notices related to public procurement and connects information about the organisation digitally.</p>
-
-          <details class="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                How is PPON different to a Companies House number?
-              </span>
-            </summary>
-            <div class="govuk-details__text" style="border:none; padding-left:0">
-              A Companies House number is a unique identifier assigned to limited companies and LLPs when they register with Companies House. Whilst PPON is also a unique identifier, it is used for organisations involved in public procurement activities.
-            </div>
-          </details>
-
         </div>
 
       </div>
@@ -185,7 +173,7 @@
     <!--                             -->
     <!-- RESULTS HEADER (FULL WIDTH) -->
     <div class="govuk-grid-column-one-half">
-      <h1 class="govuk-heading-l">Results</h1>
+      <h1 class="govuk-heading-l">Search results</h1>
     </div>
 
     <!--                           -->
@@ -194,11 +182,9 @@
     <div class="govuk-grid-column-one-half" style="text-align: right;padding-right:0">
       <div class="govuk-form-group">
         <select class="govuk-select" id="sort" name="sort">
-          <option value="published" selected>Sort results A-Z</option>
-          <option value="updated">Sort results Z-A</option>
-          <option value="views">Sort by organisation type</option>
-          <option value="views">Sort by PPON number</option>
-          <option value="comments">Sort by PPON registration date</option>
+          <option value="relevance" selected>Relevance</option>
+          <option value="a-z">A-Z</option>
+          <option value="z-a">Z-A</option>
         </select>
       </div>
     </div>
@@ -233,21 +219,34 @@
           </div>
           <div class="govuk-grid-column-one-third">
             <div class="govuk-grid-row" style="text-align: right;margin-right:0">
-              <strong class="govuk-tag govuk-tag--turquoise">
-                {{org.tag}}
-              </strong>
+              {% if org.tag == 'Buyer' %}
+                <strong class="govuk-tag govuk-tag--turquoise">
+                  {{org.tag}}
+                </strong>
+              {% elseif org.tag == 'Supplier' %}
+                <strong class="govuk-tag govuk-tag--purple">
+                  {{org.tag}}
+                </strong>
+              {% else %}
+                <strong class="govuk-tag govuk-tag--orange">
+                  {{org.tag}}
+                </strong>
+              {% endif %}
             </div>
           </div>
         </div>
 
         <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
+          <div class="govuk-grid-column-two-thirds">
             <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold govuk-!-padding-top-4">Organisation type</span>&nbsp;  {{org.org_type}}</p>
             <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">PPON number</span>&nbsp; {{org.PPON_number}}</p>
             <!--<p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">PPON registration date</span>&nbsp; {{ org.date_of_registration}}</p>-->
             <p class="govuk-body"><span class="govuk-!-font-weight-bold">Organisation address</span>&nbsp; {{ org.address}}</p>
+          </div>
+        </div>
 
-
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
             <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
           </div>
