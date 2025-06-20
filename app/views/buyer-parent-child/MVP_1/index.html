@@ -1,0 +1,214 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <!--                                   -->
+  <!--                                   -->
+  <!-- BREADCRUMBS AND LANGUAGE SELECTOR -->
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-!-padding-top-0 govuk-!-padding-bottom-0" style="margin-top:-15px;margin-bottom:-15px">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <a href="../../buyer-view/MVP_1a/index.html" class="govuk-back-link" style="color:#0b0c0c;text-decoration: none;margin-top:0">Back</a>
+        </div>
+        <div class="govuk-grid-column-one-half" style="text-align: right;">
+          <span class="govuk-body-s">English</span> | <a href="#" class="govuk-link" style="color:#0b0c0c">Cymraeg</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!--              -->
+  <!--              -->
+  <!-- MAIN CONTENT -->
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+
+      <div class="govuk-grid-row">
+
+        <!--                -->
+        <!--                -->
+        <!-- LEFT COL START -->
+        <div class="govuk-grid-column-two-thirds">
+
+          {% for org in data['Organisation Detail'] %}
+
+          <h1 class="govuk-heading-l">{{org.name}}</h1>
+
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m govuk-!-padding-top-5">Organisation details</caption>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Companies House number</th>
+                <td class="govuk-table__cell">{{org.companies_house_number}}</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Registry and number</th>
+                <td class="govuk-table__cell">{{org.registry}}<br>{{org.registry_number}} 73992884</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Change</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Organisation name</th>
+                <td class="govuk-table__cell">{{org.name}}</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Change</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Organisation email</th>
+                <td class="govuk-table__cell">{{org.email}}</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Change</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Organisation address</th>
+                <td class="govuk-table__cell">{{org.address1}}<br>{{org.address2}}<br>{{org.address_city}}<br>{{org.address_county}}<br>{{org.address_postcode}}<br>{{org.address_country}}</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Change</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Organisation type</th>
+                <td class="govuk-table__cell">{{org.organisation_type}}</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Change</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Devolved region</th>
+                <td class="govuk-table__cell">{{org.devolved_region}}</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Change</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Data sharing agreement</th>
+                <td class="govuk-table__cell">{{org.data_sharing_agreement}}</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">View</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          {% endfor %}
+
+        </div>
+
+        <!--                 -->
+        <!--                 -->
+        <!-- RIGHT COL START -->
+        <div class="govuk-grid-column-one-third">
+          <div class="govuk-!-padding-4" style="background-color:#f3f2f1">
+            <p class="govuk-body-s govuk-!-margin-bottom-0" style="color:#505a5f">Public procurement organisation number (PPON)</p>
+
+            {% for org in data['Organisation Detail'] %}
+            <h2 class="govuk-heading-m">{{org.PPON_number}}</h2>
+            {% endfor %}
+            <details class="govuk-details govuk-!-margin-bottom-1">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text govuk-body-s" style="color:#1d70b8">
+                  Help with PPON
+                </span>
+              </summary>
+              <div class="govuk-details__text govuk-body-s">
+                Text to be confirmed.
+              </div>
+            </details>
+          </div>
+        </div>
+        <!-- RIGHT COL END -->
+        <!--               -->
+        <!--               -->
+
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <hr class="govuk-!-margin-top-8 govuk-!-margin-bottom-4" style="height: 4px; background-color: #b1b4b6; border: none;">
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <h3 class="govuk-heading-m govuk-!-padding-top-8" id="child-orgs">Child organisations</h3>
+
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                What is a child organisation?
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p class="govuk-body">Public bodies are organised within a hierarchical structure that connects organisations. This makes it easier to report on spending and contracts. A parent organisation sponsors one or more child organisations, which report directly to them. Only a parent can add its child organisations.</p>
+            </div>
+          </details>
+
+          {% if data['child-added'] == "yes" %}
+            <table class="govuk-table govuk-!-margin-bottom-3">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-!-width-one-third"><a href="#">[Child Organisation {{ data['search-query'] }} One]</a></td>
+                  <td class="govuk-table__cell govuk-!-width-one-third">123 Street Name<br/>Example Town<br/>Example County<br/>AB1 2CD<br/>United Kingdom</td>
+                  <td class="govuk-table__cell govuk-!-width-one-third" style="text-align: right;"><a href="remove-child-organisation">Remove</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <a class="govuk-link" href="add-a-child-organisation"><button type="submit" class="govuk-button" data-module="govuk-button">
+              Add
+            </button></a>
+          {% else %}
+            <a class="govuk-link" href="add-a-child-organisation"><button type="submit" class="govuk-button" data-module="govuk-button">
+              Add
+            </button></a>
+          {% endif %}
+        </div>
+        <!-- LEFT COL END -->
+        <!--              -->
+        <!--              -->
+
+        <!--                 -->
+        <!--                 -->
+        <!-- RIGHT COL START -->
+        <div class="govuk-grid-column-one-third"></div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <hr class="govuk-!-margin-top-8 govuk-!-margin-bottom-4" style="height: 4px; background-color: #b1b4b6; border: none;">
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <h3 class="govuk-heading-m govuk-!-padding-top-8">Other</h3>
+
+          <p class="govuk-body govuk-!-margin-bottom-2"><a class="govuk-link" href="#">Manage API keys</a></p>
+          <p class="govuk-body">Create an API key and share it with the e-Sender you use to publish procurement notices.</p>
+
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <p class="govuk-body govuk-!-margin-bottom-2"><a class="govuk-link" href="#">Manage users</a></p>
+          <p class="govuk-body">View, add or remove users.</p>
+
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <p class="govuk-body govuk-!-margin-bottom-2"><a class="govuk-link" href="#">Register as a supplier</a></p>
+          <p class="govuk-body">If you also supply goods, works, services or utilities to the public sector.</p>
+
+          <!--<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">-->
+
+        </div>
+        <!-- LEFT COL END -->
+        <!--              -->
+        <!--              -->
+
+        <!--                 -->
+        <!--                 -->
+        <!-- RIGHT COL START -->
+        <div class="govuk-grid-column-one-third">
+      </div>
+
+
+
+
+    </main>
+  </div>
+
+{% endblock %}

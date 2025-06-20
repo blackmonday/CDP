@@ -51,7 +51,7 @@ module.exports = {
       url: "organisation",
       tag: "Supplier",
       org_type: "Supplier",
-      PPON_number: "2323044586290528",
+      PPON_number: "DRFI-1747-YZZC-EW",
       date_of_registration: "12 December 2025",
       address: "12a-12c, Claret Court, 125 Connersville Way, Croydon, CR0 4FT"
     },

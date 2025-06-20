@@ -1,0 +1,98 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <!--                                   -->
+  <!--                                   -->
+  <!-- BREADCRUMBS AND LANGUAGE SELECTOR -->
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-!-padding-top-0 govuk-!-padding-bottom-0" style="margin-top:-15px;margin-bottom:-15px">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <a href="javascript:history.go(-1)" class="govuk-back-link" style="color:#0b0c0c;text-decoration: none;margin-top:0">Back</a>
+        </div>
+        <div class="govuk-grid-column-one-half" style="text-align: right;">
+          <span class="govuk-body-s">English</span> | <a href="#" class="govuk-link" style="color:#0b0c0c">Cymraeg</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!--              -->
+  <!--              -->
+  <!-- MAIN CONTENT -->
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+
+      <div class="govuk-grid-row">
+
+        <!--                -->
+        <!--                -->
+        <!-- LEFT COL START -->
+        <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-l">Search results</h1>
+
+          <!--<div class="govuk-inset-text govuk-!-margin-top-0">2 child organisation found for <span class="govuk-!-font-weight-bold">[Search Results]</span></div>-->
+          <p class="govuk-body govuk-!-margin-top-0">2 child organisation found for <span class="govuk-!-font-weight-bold">{{ data['search-query'] }}</span></p>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                <h1 class="govuk-fieldset__heading">
+                  Select a child organisation
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                    Child Organisation <span class="govuk-!-font-weight-bold">{{ data['search-query'] }}</span> One
+                  </label>
+                  <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                    PPON: DRFI-1747-YZZC-EW
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                    Child Organisation <span class="govuk-!-font-weight-bold">{{ data['search-query'] }}</span> Two
+                  </label>
+                  <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                    PPON: DRFI-1747-XR2N-JM
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-button-group">
+            <a class="govuk-button" href="confirm-child-organisation-details">Confirm</a>
+            <a class="govuk-button govuk-button--secondary" href="add-a-child-organisation">Search again</a>
+            <a class="govuk-link" href="index">Cancel</a>
+          </div>
+
+        </div>
+        <!-- LEFT COL END -->
+        <!--              -->
+        <!--              -->
+
+        <!--                 -->
+        <!--                 -->
+        <!-- RIGHT COL START -->
+        <div class="govuk-grid-column-one-third">
+        </div>
+        <!-- RIGHT COL END -->
+        <!--               -->
+        <!--               -->
+
+      </div>
+
+    </main>
+  </div>
+
+{% endblock %}

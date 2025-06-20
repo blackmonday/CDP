@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <!--                                   -->
+  <!--                                   -->
+  <!-- BREADCRUMBS AND LANGUAGE SELECTOR -->
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-!-padding-top-0 govuk-!-padding-bottom-0" style="margin-top:-15px;margin-bottom:-15px">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <a href="javascript:history.go(-1)" class="govuk-back-link" style="color:#0b0c0c;text-decoration: none;margin-top:0">Back</a>
+        </div>
+        <div class="govuk-grid-column-one-half" style="text-align: right;">
+          <span class="govuk-body-s">English</span> | <a href="#" class="govuk-link" style="color:#0b0c0c">Cymraeg</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!--              -->
+  <!--              -->
+  <!-- MAIN CONTENT -->
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+
+      <div class="govuk-grid-row">
+
+        <!--                -->
+        <!--                -->
+        <!-- LEFT COL START -->
+        <div class="govuk-grid-column-two-thirds">
+
+          <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+              Child organisation successfully added
+            </h1>
+            <!--<div class="govuk-panel__body">
+              Your reference number<br><strong>HDJ2123F</strong>
+            </div>-->
+          </div>
+
+          <p class="govuk-body">You have successfully added a child organisation.</p>
+
+          <p class="govuk-body">To continue you can:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" href="add-a-child-organisation">Add another child organisation</a></li>
+            <li><a class="govuk-link" href="index">Return to organisation details</a></li>
+          </ul>
+
+        </div>
+        <!-- LEFT COL END -->
+        <!--              -->
+        <!--              -->
+
+        <!--                 -->
+        <!--                 -->
+        <!-- RIGHT COL START -->
+        <div class="govuk-grid-column-one-third">
+        </div>
+        <!-- RIGHT COL END -->
+        <!--               -->
+        <!--               -->
+
+      </div>
+
+    </main>
+  </div>
+
+{% endblock %}

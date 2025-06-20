@@ -1,0 +1,114 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <!--                                   -->
+  <!--                                   -->
+  <!-- BREADCRUMBS AND LANGUAGE SELECTOR -->
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-!-padding-top-0 govuk-!-padding-bottom-0" style="margin-top:-15px;margin-bottom:-15px">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <a href="javascript:history.go(-1)" class="govuk-back-link" style="color:#0b0c0c;text-decoration: none;margin-top:0">Back</a>
+        </div>
+        <div class="govuk-grid-column-one-half" style="text-align: right;">
+          <span class="govuk-body-s">English</span> | <a href="#" class="govuk-link" style="color:#0b0c0c">Cymraeg</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!--              -->
+  <!--              -->
+  <!-- MAIN CONTENT -->
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+
+      <div class="govuk-grid-row">
+
+        <!--                -->
+        <!--                -->
+        <!-- LEFT COL START -->
+        <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-l">Remove child organisation</h1>
+
+          <h1 class="govuk-heading-m">Are you sure you want to remove this child organisation?</h1>
+
+          <div style="border:solid 1px #b1b4b6; background-color:#f3f2f1;padding:20px 20px 0px 20px; margin-bottom:0">
+            <p class="govuk-body govuk-!-font-weight-bold">[Child Organisations {{ data['search-query'] }} One]</p>
+          </div>
+          <div style="border:solid 1px #b1b4b6; border-top:none; background-color:#ffffff;padding:20px 20px 0px 20px; margin-bottom:30px">
+
+            <table class="govuk-table">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header govuk-!-width-one-third">Companies House number</th>
+                  <td class="govuk-table__cell govuk-!-width-two-thirds">9876277</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header govuk-!-width-one-third">Organisation type</th>
+                  <td class="govuk-table__cell govuk-!-width-two-thirds">Limited company</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header govuk-!-width-one-third">Organisation address</th>
+                  <td class="govuk-table__cell govuk-!-width-two-thirds">123 Street Name<br/>Example Town<br/>Example County<br/>AB1 2CD<br/>United Kingdom</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header govuk-!-width-one-third" style="border:none">Organisation email</th>
+                  <td class="govuk-table__cell govuk-!-width-two-thirds" style="border:none">info@{{ data['search-query'] }}org.co.uk</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+          <div class="govuk-inset-text">Removing your child organisation will mean it does not show on your account profile and will no longer be digitally linked to your organisation on Find a Tender.</div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                    Yes, remove
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                    No, do not remove
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-button-group">
+            <a class="govuk-button" href="index?child-added=no">Confirm</a>
+          </div>
+
+        </div>
+        <!-- LEFT COL END -->
+        <!--              -->
+        <!--              -->
+
+        <!--                 -->
+        <!--                 -->
+        <!-- RIGHT COL START -->
+        <div class="govuk-grid-column-one-third">
+        </div>
+        <!-- RIGHT COL END -->
+        <!--               -->
+        <!--               -->
+
+      </div>
+
+    </main>
+  </div>
+
+{% endblock %}
