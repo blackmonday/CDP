@@ -1,0 +1,294 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <!--                                  -->
+  <!--                                  -->
+  <!-- BREADRUMBS AND LANGUAGE SELECTOR -->
+  <div class="govuk-grid-row" style="margin-top:-30px; margin-bottom:30px">
+    <div class="govuk-grid-column-one-half">
+      <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="../../buyer-view/index.html">Home</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#" style="color:#0b0c0c;text-decoration: none;">PPON</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div class="govuk-grid-column-one-half" style="text-align: right;margin-top:15px">
+      <span class="govuk-body-s">English</span> | <a href="#" class="govuk-link" style="color:#0b0c0c">Cymraeg</a>
+    </div>
+  </div>
+
+  <!--              -->
+  <!--              -->
+  <!-- MAIN CONTENT -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <!--                  -->
+      <!--                  -->
+      <!-- BLUE PAGE HEADER -->
+      <div class="govuk-grid-column-full" style="background-color:#1d70b8;color:#ffffff;padding:30px 30px 5px 30px;margin-top:30px">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-3" style="color:#ffffff">Public procurement organisation number register</h1>
+       
+        <p class="govuk-body" style="color:#fff;margin-bottom:5px">Search by organisation name or PPON number</p>
+
+        <style>
+          #wrapper {
+            width:100%;
+            overflow:hidden;
+          }
+          #first {
+            width:50%;
+            float:left;
+          }
+          #second {
+            overflow:hidden;
+          }
+        </style>
+        <div id="wrapper">
+
+          <div class="govuk-form-group" id="first">
+            <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint" style="border:none">
+          </div>
+          
+          <style>
+            .gem-c-search__submit-wrapper {
+                width: 1%;
+            }
+            .gem-c-search__item {
+                position: relative;
+                display: table-cell;
+                vertical-align: top;
+            }
+
+            .gem-c-search--large .gem-c-search__submit {
+                width: 50px;
+                height: 50px;
+            }
+            .gem-c-search--on-govuk-blue .gem-c-search__submit {
+                background-color: #0b0c0c;
+                color: #fff;
+            }
+            .gem-c-search__submit {
+                border: 0;
+                cursor: pointer;
+                border-radius: 0;
+                outline: 2px solid rgba(0, 0, 0, 0);
+                outline-offset: 0;
+                position: relative;
+                padding: 0;
+                width: 40px;
+                height: 40px;
+                text-indent: -5000px;
+                overflow: hidden;
+            }
+
+            .gem-c-search--large .gem-c-search__submit .gem-c-search__icon {
+                transform: scale(0.4);
+            }
+            .gem-c-search__submit .gem-c-search__icon {
+                pointer-events: none;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                transform: scale(0.5);
+            }
+            svg[Attributes Style] {
+                width: 27;
+                height: 27;
+                fill: none;
+            }
+            user agent stylesheet
+            svg:not(:root) {
+                overflow-clip-margin: content-box;
+                overflow: hidden;
+            }
+            .gem-c-search--homepage .gem-c-search__submit {
+                background-color: #d2e2f1;
+                color: #1d70b8;
+            }
+            .gem-c-search__submit {
+                border: 0;
+                cursor: pointer;
+                border-radius: 0;
+                outline: 2px solid rgba(0, 0, 0, 0);
+                outline-offset: 0;
+                position: relative;
+                padding: 0;
+                width: 40px;
+                height: 40px;
+                text-indent: -5000px;
+                overflow: hidden;
+                background:#D4E2F0;
+            }
+            .gem-c-search__submit:hover {
+              background:#E6EFF7;
+            }
+          </style>
+          <div class="gem-c-search__item gem-c-search__submit-wrapper" id="second">
+            <button class="gem-c-search__submit" type="submit" enterkeyhint="search">
+              Search GOV.UK
+              <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"></circle>
+                <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3"></line>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--            -->
+      <!--            -->
+      <!-- INSET TEXT -->
+      <div class="govuk-grid-column-full govuk-!-margin-top-3 govuk-!-margin-bottom-4">
+
+        <div class="govuk-inset-text">
+          <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Public procurement organisation number (PPON)</p>
+          <p class="govuk-body">A PPON is a unique identifier assigned to organisations that participate in public procurement. It is used to manage and publish notices related to public procurement and connects information about the organisation digitally.</p>
+
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                How is PPON different to a Companies House number?
+              </span>
+            </summary>
+            <div class="govuk-details__text" style="border:none; padding-left:0">
+              A Companies House number is a unique identifier assigned to limited companies and LLPs when they register with Companies House. Whilst PPON is also a unique identifier, it is used for organisations involved in public procurement activities.
+            </div>
+          </details>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+
+    <!--                             -->
+    <!--                             -->
+    <!-- RESULTS HEADER (FULL WIDTH) -->
+    <div class="govuk-grid-column-one-half">
+      <h1 class="govuk-heading-l">Results</h1>
+    </div>
+
+    <!--                           -->
+    <!--                           -->
+    <!-- SELECT WITH VIEW SELECTOR -->
+    <div class="govuk-grid-column-one-half" style="text-align: right;padding-right:0">
+      <div class="govuk-form-group">
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published" selected>Sort results A-Z</option>
+          <option value="updated">Sort results Z-A</option>
+          <option value="views">Sort by organisation type</option>
+          <option value="views">Sort by PPON number</option>
+          <option value="comments">Sort by PPON registration date</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    
+    <div class="govuk-grid-column-full" style="margin-top: -20px;">
+      {% set org_count = data['organisations'] | length %}
+      <p class="govuk-body">We've found <span class="govuk-!-font-weight-bold">{{ (org_count * 3333).toLocaleString('en-GB') }}</span> organisations</p>
+    </div>
+
+  </div>
+               
+  <!--             -->
+  <!--             -->
+  <!-- LIST STARTS -->
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      <!--              -->
+      <!--              -->
+      <!-- RESULTS LIST -->
+      {% for org in data['organisations'] %}
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <!--<h2 class="govuk-heading-m"><a href={{ org.url }}>{{org.name}}</a></h2>-->
+            <h2 class="govuk-heading-m">{{org.name}}</h2>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <div class="govuk-grid-row" style="text-align: right;margin-right:0">
+              <strong class="govuk-tag govuk-tag--turquoise">
+                {{org.tag}}
+              </strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold govuk-!-padding-top-4">Organisation type</span>&nbsp;  {{org.org_type}}</p>
+            <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">PPON number</span>&nbsp; {{org.PPON_number}}</p>
+            <!--<p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">PPON registration date</span>&nbsp; {{ org.date_of_registration}}</p>-->
+            <p class="govuk-body"><span class="govuk-!-font-weight-bold">Organisation address</span>&nbsp; {{ org.address}}</p>
+
+
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          </div>
+        </div>
+      {% endfor %}
+
+      <!--            -->
+      <!--            -->
+      <!-- PAGINATION -->
+      <nav class="govuk-pagination" aria-label="Pagination">
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+            <span class="govuk-pagination__link-title">
+              Next<span class="govuk-visually-hidden"> page</span>
+            </span>
+            <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+
+    </div>
+    
+  </div>
+
+  </div>
+      
+{% endblock %}
