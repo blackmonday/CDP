@@ -31,123 +31,120 @@
   <!--              -->
   <!-- MAIN CONTENT -->
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
 
       <!--                  -->
       <!--                  -->
       <!-- BLUE PAGE HEADER -->
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-3">Public procurement organisation number register</h1>
-       
-        <p class="govuk-body" style="margin-bottom:5px">Search by organisation name or PPON number</p>
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-3">Public procurement organisation number register</h1>
+      
+      <p class="govuk-body" style="margin-bottom:5px">Search by organisation name or PPON number</p>
 
+      <style>
+        #wrapper {
+          width:100%;
+          overflow:hidden;
+          border:10px solid #DEE0E2;
+        }
+        #first {
+          width: 93%;
+          float:left;
+        }
+        #second {
+          overflow:hidden;
+        }
+      </style>
+      <div id="wrapper">
+
+        <div class="govuk-form-group" id="first" style="margin-bottom:0;">
+          <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint" style="border-width:1px; border-right:none;">
+        </div>
+        
         <style>
-          #wrapper {
-            width:100%;
-            overflow:hidden;
-            border:10px solid #DEE0E2;
+          .gem-c-search__submit-wrapper {
+              width: 1%;
           }
-          #first {
-            width: 93%;
-            float:left;
+          .gem-c-search__item {
+              position: relative;
+              display: table-cell;
+              vertical-align: top;
           }
-          #second {
-            overflow:hidden;
+
+          .gem-c-search--large .gem-c-search__submit {
+              width: 50px;
+              height: 50px;
+          }
+          .gem-c-search--on-govuk-blue .gem-c-search__submit {
+              background-color: #0b0c0c;
+              color: #fff;
+          }
+          .gem-c-search__submit {
+              border: 0;
+              cursor: pointer;
+              border-radius: 0;
+              outline: 2px solid rgba(0, 0, 0, 0);
+              outline-offset: 0;
+              position: relative;
+              padding: 0;
+              width: 40px;
+              height: 40px;
+              text-indent: -5000px;
+              overflow: hidden;
+          }
+
+          .gem-c-search--large .gem-c-search__submit .gem-c-search__icon {
+              transform: scale(0.4);
+          }
+          .gem-c-search__submit .gem-c-search__icon {
+              pointer-events: none;
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              top: 0;
+              left: 0;
+              transform: scale(0.5);
+              color:white;
+          }
+          svg[Attributes Style] {
+              width: 27;
+              height: 27;
+              fill: none;
+          }
+          user agent stylesheet
+          svg:not(:root) {
+              overflow-clip-margin: content-box;
+              overflow: hidden;
+          }
+          .gem-c-search--homepage .gem-c-search__submit {
+              background-color: #d2e2f1;
+              color: #1d70b8;
+          }
+          .gem-c-search__submit {
+              border: 0;
+              cursor: pointer;
+              border-radius: 0;
+              outline: 2px solid rgba(0, 0, 0, 0);
+              outline-offset: 0;
+              position: relative;
+              padding: 0;
+              width: 40px;
+              height: 40px;
+              text-indent: -5000px;
+              overflow: hidden;
+              background:#3171B6;
+          }
+          .gem-c-search__submit:hover {
+            background:#377ECB;
           }
         </style>
-        <div id="wrapper">
-
-          <div class="govuk-form-group" id="first" style="margin-bottom:0;">
-            <input class="govuk-input" id="event-name" name="eventName" type="text" aria-describedby="event-name-hint" style="border-width:1px; border-right:none;">
-          </div>
-          
-          <style>
-            .gem-c-search__submit-wrapper {
-                width: 1%;
-            }
-            .gem-c-search__item {
-                position: relative;
-                display: table-cell;
-                vertical-align: top;
-            }
-
-            .gem-c-search--large .gem-c-search__submit {
-                width: 50px;
-                height: 50px;
-            }
-            .gem-c-search--on-govuk-blue .gem-c-search__submit {
-                background-color: #0b0c0c;
-                color: #fff;
-            }
-            .gem-c-search__submit {
-                border: 0;
-                cursor: pointer;
-                border-radius: 0;
-                outline: 2px solid rgba(0, 0, 0, 0);
-                outline-offset: 0;
-                position: relative;
-                padding: 0;
-                width: 40px;
-                height: 40px;
-                text-indent: -5000px;
-                overflow: hidden;
-            }
-
-            .gem-c-search--large .gem-c-search__submit .gem-c-search__icon {
-                transform: scale(0.4);
-            }
-            .gem-c-search__submit .gem-c-search__icon {
-                pointer-events: none;
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                top: 0;
-                left: 0;
-                transform: scale(0.5);
-                color:white;
-            }
-            svg[Attributes Style] {
-                width: 27;
-                height: 27;
-                fill: none;
-            }
-            user agent stylesheet
-            svg:not(:root) {
-                overflow-clip-margin: content-box;
-                overflow: hidden;
-            }
-            .gem-c-search--homepage .gem-c-search__submit {
-                background-color: #d2e2f1;
-                color: #1d70b8;
-            }
-            .gem-c-search__submit {
-                border: 0;
-                cursor: pointer;
-                border-radius: 0;
-                outline: 2px solid rgba(0, 0, 0, 0);
-                outline-offset: 0;
-                position: relative;
-                padding: 0;
-                width: 40px;
-                height: 40px;
-                text-indent: -5000px;
-                overflow: hidden;
-                background:#3171B6;
-            }
-            .gem-c-search__submit:hover {
-              background:#377ECB;
-            }
-          </style>
-          <div class="gem-c-search__item gem-c-search__submit-wrapper" id="second">
-            <button class="gem-c-search__submit" type="submit" enterkeyhint="search">
-              Search GOV.UK
-              <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"></circle>
-                <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3"></line>
-              </svg>
-            </button>
-          </div>
-
+        <div class="gem-c-search__item gem-c-search__submit-wrapper" id="second">
+          <button class="gem-c-search__submit" type="submit" enterkeyhint="search">
+            Search GOV.UK
+            <svg class="gem-c-search__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <circle cx="12.0161" cy="11.0161" r="8.51613" stroke="currentColor" stroke-width="3"></circle>
+              <line x1="17.8668" y1="17.3587" x2="26.4475" y2="25.9393" stroke="currentColor" stroke-width="3"></line>
+            </svg>
+          </button>
         </div>
 
       </div>
@@ -155,15 +152,19 @@
       <!--            -->
       <!--            -->
       <!-- INSET TEXT -->
-      <div class="govuk-grid-column-two-thirds govuk-!-margin-top-3 govuk-!-margin-bottom-4">
-
-        <div class="govuk-inset-text">
-          <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Public procurement organisation number (PPON)</p>
-          <p class="govuk-body">A PPON is a unique identifier assigned to organisations that participate in public procurement. It is used to manage and publish notices related to public procurement and connects information about the organisation digitally.</p>
+      <details class="govuk-details" style="margin-top:30px">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What is a Public procurement organisation number (PPON)?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          A PPON is a unique identifier assigned to organisations that participate in public procurement. It is used to manage and publish notices related to public procurement and connects information about the organisation digitally.
         </div>
+      </details>
 
-      </div>
 
+      
     </div>
   </div>
 
@@ -173,7 +174,9 @@
     <!--                             -->
     <!-- RESULTS HEADER (FULL WIDTH) -->
     <div class="govuk-grid-column-one-half">
-      <h1 class="govuk-heading-l">Search results</h1>
+      <h1 class="govuk-heading-l" style="margin-bottom:5px">Search results</h1>
+      {% set org_count = data['organisations'] | length %}
+      <p class="govuk-body">We've found <span class="govuk-!-font-weight-bold">{{ (org_count * 3333).toLocaleString('en-GB') }}</span> organisations</p>
     </div>
 
     <!--                           -->
@@ -181,21 +184,15 @@
     <!-- SELECT WITH VIEW SELECTOR -->
     <div class="govuk-grid-column-one-half" style="text-align: right;padding-right:0">
       <div class="govuk-form-group">
+        <label class="govuk-label" for="sort" style="margin-right:160px">
+          Sort by
+        </label>
         <select class="govuk-select" id="sort" name="sort">
           <option value="relevance" selected>Relevance</option>
           <option value="a-z">A-Z</option>
           <option value="z-a">Z-A</option>
         </select>
       </div>
-    </div>
-
-  </div>
-
-  <div class="govuk-grid-row">
-    
-    <div class="govuk-grid-column-full" style="margin-top: -20px;">
-      {% set org_count = data['organisations'] | length %}
-      <p class="govuk-body">We've found <span class="govuk-!-font-weight-bold">{{ (org_count * 3333).toLocaleString('en-GB') }}</span> organisations</p>
     </div>
 
   </div>
