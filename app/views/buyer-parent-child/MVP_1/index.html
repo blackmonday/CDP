@@ -119,16 +119,23 @@
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-          <hr class="govuk-!-margin-top-8 govuk-!-margin-bottom-4" style="height: 4px; background-color: #b1b4b6; border: none;">
+          <hr class="govuk-!-margin-top-4 govuk-!-margin-bottom-2" style="height: 4px; background-color: #fff; border: none;">
         </div>
       </div>
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
 
-          <h3 class="govuk-heading-m govuk-!-padding-top-8" id="child-orgs">Child organisations</h3>
+          <h3 class="govuk-heading-m govuk-!-padding-top-8" id="child-orgs">Add child organisations</h3>
 
-          <details class="govuk-details">
+          <p class="govuk-body">This section allows you to add child organisations to your organisation's profile. Once added, child organisations will appear below. You can add new child organisations or remove them at any time.</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>only a parent organisation can add its child organisations</li>
+            <li>a child organisation can only be added if they are registered in the <a href="#">Supplier Registration</a> service</li>
+          </ul>
+
+          <details class="govuk-details govuk-!-padding-top-4 govuk-!-padding-bottom-4">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
                 What is a child organisation?
@@ -143,17 +150,17 @@
             <table class="govuk-table govuk-!-margin-bottom-3">
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell govuk-!-width-one-third"><a href="#">[Child Organisation {{ data['search-query'] }} One]</a></td>
-                  <td class="govuk-table__cell govuk-!-width-one-third">123 Street Name<br/>Example Town<br/>Example County<br/>AB1 2CD<br/>United Kingdom</td>
+                  <td class="govuk-table__cell govuk-!-width-one-third">[Child Organisation {{ data['search-query'] }} One]</td>
+                  <td class="govuk-table__cell govuk-!-width-one-third"><span class="govuk-!-font-weight-bold">PPON</span><br/>DRFI-1747-YZZC-EW</td>
                   <td class="govuk-table__cell govuk-!-width-one-third" style="text-align: right;"><a href="remove-child-organisation">Remove</a></td>
                 </tr>
               </tbody>
             </table>
-            <a class="govuk-link" href="add-a-child-organisation"><button type="submit" class="govuk-button" data-module="govuk-button">
+            <a class="govuk-link" href="add-a-child-organisation"><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
               Add
             </button></a>
           {% else %}
-            <a class="govuk-link" href="add-a-child-organisation"><button type="submit" class="govuk-button" data-module="govuk-button">
+            <a class="govuk-link" href="add-a-child-organisation"><button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
               Add
             </button></a>
           {% endif %}
@@ -170,7 +177,7 @@
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-          <hr class="govuk-!-margin-top-8 govuk-!-margin-bottom-4" style="height: 4px; background-color: #b1b4b6; border: none;">
+          <hr class="govuk-!-margin-top-4 govuk-!-margin-bottom-2" style="height: 4px; background-color: #fff; border: none;">
         </div>
       </div>
 
