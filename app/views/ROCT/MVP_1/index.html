@@ -310,13 +310,33 @@
 <div class="govuk-width-container" style="margin-top: 2rem;">
 
   <div class="govuk-inset-text">
-  The Register of Commercial Tools allows you to search for frameworks, dynamic markets and other procurement tools.
+  The Register of Commercial Tools allows you to search for frameworks and dynamic markets.
   </div>
 
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row" style="margin-bottom:-40px">
+      <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l" style="margin-bottom: 10px;">Search Results</h1>
-      <p class="govuk-body-m" style="margin-bottom: 15px;">
-        We've found <span class="govuk-!-font-weight-bold">54</span> results
-      </p>
+        <p class="govuk-body-m" style="margin-bottom: 15px;">
+          We've found <span class="govuk-!-font-weight-bold">54</span> results
+        </p>
+      </div>
+      <div class="govuk-grid-column-one-third" style="text-align:right">
+        <!--Sort Results -->
+        <div class="govuk-form-group" style="margin-bottom: 0;">
+          <label class="govuk-label govuk-!-font-weight-bold" for="sort" style="padding-right:118px">Sort results</label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="relevance">Relevance</option>
+            <option value="date">Alphabetical (A-Z)</option>
+            <option value="a-z">Alphabetical (Z-A)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
 
 <div class="govuk-grid-row">
 
@@ -420,13 +440,104 @@
               <li><strong>Framework</strong> - A contract that allows the award of future contracts, which will be advertised only to suppliers on the framework.</li>
               <li><strong>Dynamic market</strong> - Arrangements that suppliers who meet the conditions for membership can join, which allow them to bid for future contracts restricted to members of the market. Future contracts must be advertised in tender notices. New suppliers can join at any time during the term of the market.</li>
               <li><strong>Utilities dynamic market</strong> - A dynamic market that can only be used by utility organisations to award utilities contracts. Tender notices may optionally be provided only to members of the market. (Not included in the DM/DPS filter option).</li>
-              <li><strong>Dynamic purchasing system</strong> - Similar to a dynamic market, but only allowed for commonly used purchases. Tender notices are not required for future contracts. New suppliers can join at any time during the term of the market. Established under the Public Contracts Regulations 2015 or Utilities Contracts Regulations 2016.</li>
-              <li><strong>Qualification system</strong> - Similar to a utilities dynamic market, a system used by utilities to pre-qualify suppliers. Established under the Utilities Contracts Regulations 2016.</li>
+              <!--<li><strong>Dynamic purchasing system</strong> - Similar to a dynamic market, but only allowed for commonly used purchases. Tender notices are not required for future contracts. New suppliers can join at any time during the term of the market. Established under the Public Contracts Regulations 2015 or Utilities Contracts Regulations 2016.</li>
+              <li><strong>Qualification system</strong> - Similar to a utilities dynamic market, a system used by utilities to pre-qualify suppliers. Established under the Utilities Contracts Regulations 2016.</li>-->
             </ul>
           </div>
         </details>
-      </div>
 
+        <details class="govuk-details small-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Procurement Act 2023
+            </span>
+          </summary>
+          <div class="govuk-details__text2" style="">
+
+            <div class="white-box" id="white-box-content" hidden style="background:#fff; padding:0.5rem 0.75rem; margin-top: 0; border:1px solid #b1b4b6;">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+
+
+                  <div class="govuk-checkboxes__item">
+                    <input
+                      class="govuk-checkboxes__input"
+                      id="parent-1"
+                      name="award-option"
+                      type="checkbox"
+                      value="parent1"
+                    />
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="parent-1">
+                      Frameworks
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item sub-checkbox" style="margin-left: 1.5rem;">
+                    <input
+                      class="govuk-checkboxes__input"
+                      id="child-1a"
+                      name="award-option-sub-1"
+                      type="checkbox"
+                      value="1a"
+                    />
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="child-1a">
+                      Open frameworks only
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item sub-checkbox" style="margin-left: 1.5rem;">
+                    <input
+                      class="govuk-checkboxes__input"
+                      id="child-1b"
+                      name="award-option-sub-1"
+                      type="checkbox"
+                      value="1b"
+                    />
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="child-1b">
+                      Exclude open frameworks
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item" style="margin-top: 1rem;">
+                    <input
+                      class="govuk-checkboxes__input"
+                      id="parent-2"
+                      name="award-option"
+                      type="checkbox"
+                      value="parent2"
+                    />
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="parent-2">
+                      Dynamic markets
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item sub-checkbox" style="margin-left: 1.5rem;">
+                    <input
+                      class="govuk-checkboxes__input"
+                      id="child-2a"
+                      name="award-option-sub-2"
+                      type="checkbox"
+                      value="2a"
+                    />
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="child-2a">
+                      Utilities dynamic markets only
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item sub-checkbox" style="margin-left: 1.5rem;">
+                    <input
+                      class="govuk-checkboxes__input"
+                      id="child-2b"
+                      name="award-option-sub-2"
+                      type="checkbox"
+                      value="2b"
+                    />
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="child-2b">
+                      Excludes Utilities dynamic markets
+                    </label>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+        </details>
+
+      </div>
+      
       <div class="white-box" id="white-box-content" hidden style="background:#fff; padding:0.5rem 0.75rem; margin-top: 0; border:1px solid #b1b4b6;">
         <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
 
@@ -507,8 +618,19 @@
     </div>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+
     <!-- Filter Two -->
-    <div class="grey-box" style="margin-top: 0rem;">
+    <div class="grey-box" style="margin-top: 0rem;display:none;">
     <button
       class="govuk-accordion__section-header"
       aria-expanded="false"
@@ -568,8 +690,18 @@
     </div>
   </div>
 
+
+
+
+
+
+
+
+
+
+
     <!-- Filter Three -->
-    <div class="grey-box" style="margin-top: 0rem;">
+    <div class="grey-box" style="margin-top: 0rem; display:none;">
     <button
       class="govuk-accordion__section-header"
       aria-expanded="false"
@@ -629,6 +761,18 @@
       </div>
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Filter Ten (for A/B Testing)-->
   <div class="grey-box">
     <button
@@ -686,12 +830,12 @@
             value="parent2"
           />
           <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="filter10-parent-2">
-            Active
+            Active available to buyers
           </label>
         </div>
 
         <!-- Child checkboxes of parent 2 (indented) -->
-        <div class="govuk-checkboxes__item sub-checkbox" style="margin-left: 1.5rem;">
+        <!--<div class="govuk-checkboxes__item sub-checkbox" style="margin-left: 1.5rem;">
           <input
             class="govuk-checkboxes__input"
             id="filter10-child-2a"
@@ -700,7 +844,7 @@
             value="2a"
           />
           <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="filter10-child-2a">
-            Supplier can join
+            Active accepting suppliers
           </label>
         </div>
         <div class="govuk-checkboxes__item sub-checkbox" style="margin-left: 1.5rem;">
@@ -712,7 +856,21 @@
             value="2b"
           />
           <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-14" for="filter10-child-2b">
-            Buyers can use
+            Expired
+          </label>
+        </div>-->
+
+        <!-- Parent checkbox 3 (alone) -->
+        <div class="govuk-checkboxes__item" style="margin-top: 1rem;">
+          <input
+            class="govuk-checkboxes__input"
+            id="filter10-parent-3"
+            name="award-option"
+            type="checkbox"
+            value="parent3"
+          />
+          <label class="govuk-label govuk-checkboxes__label govuk-!-font-size-16" for="filter10-parent-3">
+            Active accepting suppliers
           </label>
         </div>
 
@@ -929,7 +1087,7 @@
             />
           </svg>
         </span>
-        <span class="govuk-body" style="margin: 0;">Industry CPV code</span>
+        <span class="govuk-body" style="margin: 0;">CPV code</span>
       </button>
       <p id="extra-text-7" hidden style="margin:0.5rem 0 0; font-size:1rem; color:#000000;">
         The common procurement vocabulary (CPV) is used to classify contracts in a standardised way
@@ -1184,12 +1342,12 @@
 
   <!-- RIGHT SIDE: Two-thirds column -->
   <div class="govuk-grid-column-two-thirds" style="padding-right: 0; padding-left: 15px;">
-    <div style="margin-top: 20px;">
+    <div style="margin-top: 20px; text-align:right">
       <div >
         
         <!--Sort Results -->
-        <div class="govuk-form-group" style="margin-bottom: 0;">
-          <label class="govuk-label" for="sort">Sort results</label>
+        <!--<div class="govuk-form-group" style="margin-bottom: 0;">
+          <label class="govuk-label govuk-!-font-weight-bold" for="sort" style="padding-right:118px">Sort results</label>
           <select class="govuk-select" id="sort" name="sort">
             <option value="relevance">Relevance</option>
             <option value="date">Published (newest)</option>
@@ -1197,9 +1355,9 @@
             <option value="a-z">Closing (first)</option>
             <option value="a-z">Closing (last)</option>
           </select>
-        </div>
+        </div>-->
+
       </div>
-      
     </div>
     
     
@@ -1235,7 +1393,7 @@
               <h2 class="govuk-heading-s" style="margin-bottom:0">Submission deadline: <span class="govuk-!-font-weight-regular">10 February 2025</span></h2>
               <h2 class="govuk-heading-s" style="margin-bottom:0">Contract dates <span class="govuk-!-font-weight-regular">1 March 2025 to 28 February 2027</span></h2>
               <h2 class="govuk-heading-s" style="margin-bottom:0">Award method <span class="govuk-!-font-weight-regular">Without competition</span></h2>
-                  <div class="govuk-form-group govuk-!-margin-top-3">
+                  <!--<div class="govuk-form-group govuk-!-margin-top-3">
                     <div class="govuk-checkboxes govuk-checkboxes--small">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="my-checkbox" name="my-checkbox" type="checkbox" value="yes">
@@ -1244,7 +1402,7 @@
                         </label>
                       </div>
                     </div>
-                  </div>
+                  </div>-->
             </div>
              <div class="search-result-stacked">
               <div class="govuk-grid-row govuk-!-margin-bottom-2" style="padding: 1rem 0; border-bottom: 1px solid #b1b4b6;">
@@ -1312,7 +1470,7 @@
               <h2 class="govuk-heading-s" style="margin-bottom:0">Contract dates <span class="govuk-!-font-weight-regular">1 March 2025 to 28 February 2027</span></h2>
               <h2 class="govuk-heading-s" style="margin-bottom:0">Award method <span class="govuk-!-font-weight-regular">Without competition</span></h2>
               <div class="govuk-form-group govuk-!-margin-top-3">
-                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                    <!--<div class="govuk-checkboxes govuk-checkboxes--small">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="my-checkbox" name="my-checkbox" type="checkbox" value="yes">
                         <label class="govuk-label govuk-checkboxes__label" for="my-checkbox">
@@ -1320,7 +1478,7 @@
                         </label>
                       </div>
                     </div>
-                  </div>
+                  </div>-->
             </div>
             <div class="search-result-stacked">
               <div class="govuk-grid-row govuk-!-margin-bottom-2" style="padding: 1rem 0; border-bottom: 1px solid #b1b4b6;">
@@ -1389,7 +1547,7 @@
               <h2 class="govuk-heading-s" style="margin-bottom:0">Contract dates <span class="govuk-!-font-weight-regular">1 March 2025 to 28 February 2027</span></h2>
               <h2 class="govuk-heading-s" style="margin-bottom:0">Award method <span class="govuk-!-font-weight-regular">Without competition</span></h2>
               <div class="govuk-form-group govuk-!-margin-top-3">
-                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                    <!--<div class="govuk-checkboxes govuk-checkboxes--small">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="my-checkbox" name="my-checkbox" type="checkbox" value="yes">
                         <label class="govuk-label govuk-checkboxes__label" for="my-checkbox">
@@ -1397,7 +1555,7 @@
                         </label>
                       </div>
                     </div>
-                  </div>
+                  </div>-->
                   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
             </div>
             <div class="search-result-stacked">
