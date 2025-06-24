@@ -86,4 +86,43 @@ module.exports = {
       data_sharing_agreement: "Agreed on 2 January 2025",
     },
   ],
+  "ROTCresults": [
+    {
+      name: "Provision of Scanning Equipment Maintenance",
+      type: "Contracting authority",
+      tag: "Active",
+      commercial_tool: "Open framework scheme",
+      status: "Applications window is open",
+      maximum_fee: "3%",
+      other_contracting_authority_can_use: "Yes",
+      submission_deadline: "10 February 2025",
+      contract_dates: "1 March 2025 to 28 February 2027",
+      award_method: "Without competition"
+    },
+    {
+      name: "UVDB Powered by Achilles QUDM for Goods, Works and Services",
+      type: "Contracting authority",
+      tag: "Upcoming",
+      commercial_tool: "Dynamic market",
+      status: "Applications window opening soon",
+      maximum_fee: "3%",
+      other_contracting_authority_can_use: "Yes",
+      submission_deadline: "10 February 2025",
+      contract_dates: "1 March 2025 to 28 February 2027",
+      award_method: "Without competition"
+    },
+    {
+      name: "Marketing & Communications Services Fully Integrated Marketing, PR & Public Services",
+      type: "Contracting authority",
+      tag: "Expired",
+      commercial_tool: "Open framework scheme",
+      status: "Applications window has closed",
+      maximum_fee: "3%",
+      other_contracting_authority_can_use: "Yes",
+      submission_deadline: "10 February 2025",
+      contract_dates: "1 March 2025 to 28 February 2027",
+      award_method: "Without competition" 
+   },
+  ],
+
 };

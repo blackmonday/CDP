@@ -6,6 +6,8 @@
 
 {% block content %}
 
+<div class="govuk-width-container">
+
   <!--              -->
   <!--              -->
   <!-- PHASE BANNER -->
@@ -19,190 +21,247 @@
       </span>
     </p>
   </div>
+  
+  <main class="govuk-main-wrapper">
 
-
-  <!--                                  -->
-  <!--                                  -->
-  <!-- BREADRUMBS AND LANGUAGE SELECTOR -->
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-half">
-      <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
-        <ol class="govuk-breadcrumbs__list">
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="../../buyer-view/index.html">Home</a>
-          </li>
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="#" style="color:#0b0c0c;text-decoration: none;">Search results</a>
-          </li>
-        </ol>
-      </nav>
-    </div>
-    <div class="govuk-grid-column-one-half" style="text-align: right;margin-top:15px">
-      <span class="govuk-body-s">English</span> | <a href="#" class="govuk-link" style="color:#0b0c0c">Cymraeg</a>
-    </div>
-  </div>
-
-  <!--              -->
-  <!--              -->
-  <!-- MAIN CONTENT -->
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-
-      <!--            -->
-      <!--            -->
-      <!-- INSET TEXT -->
-      <div class="govuk-grid-column-full govuk-!-margin-bottom-4">
-
-        <div class="govuk-inset-text">
-          <p class="govuk-body">The Register of Commercial Tools allows you to search for frameworks and dynamic markets.</p>
-          </details>
-        </div>
-
-      </div>
-
-      <!--                             -->
-      <!--                             -->
-      <!-- RESULTS HEADER (FULL WIDTH) -->
-      <div class="govuk-grid-column-one-half">
-        <h1 class="govuk-heading-l" style="margin-bottom: 10px;">Search Results</h1>
-        <p class="govuk-body-m" style="margin-bottom: 15px;">
-          {% set org_count = data['organisations'] | length %}
-          We've found <span class="govuk-!-font-weight-bold">{{ org_count * 3 }}</span> results
-        </p>
-      </div>
-
-      <!--                           -->
-      <!--                           -->
-      <!-- SELECT WITH VIEW SELECTOR -->
-      <div class="govuk-grid-column-one-half" style="text-align: right;padding-right:0">
-        <div class="govuk-form-group">
-        <label class="govuk-label govuk-!-font-weight-bold" for="sort" style="padding-right:118px">Sort results</label>
-          <select class="govuk-select" id="sort" name="sort">
-            <option value="views" selected>Relevance</option>
-            <option value="published">Alphabetical (A-Z)</option>
-            <option value="updated">Alphabetical (Z-A)</option>
-          </select>
+    <!--                                  -->
+    <!--                                  -->
+    <!-- BREADRUMBS AND LANGUAGE SELECTOR -->
+    <div class="govuk-grid-row" style="margin-top:-40px;">
+      <div class="govuk-grid-column-full">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half">
+            <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="../../buyer-view/index.html">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="#" style="color:#0b0c0c;text-decoration: none;">Search results</a>
+                </li>
+              </ol>
+            </nav>
+          </div>
+          <div class="govuk-grid-column-one-half" style="text-align: right;margin-top:15px">
+            <span class="govuk-body-s">English</span> | <a href="#" class="govuk-link" style="color:#0b0c0c">Cymraeg</a>
+          </div>
         </div>
       </div>
-            
-      <!--                         -->
-      <!--                         -->
-      <!-- LIST STARTS (2-COLUMNS) -->
-
+    </div>
+    
+      <!--              -->
+      <!--              -->
+      <!-- MAIN CONTENT -->
       <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
 
-        <!--                       -->
-        <!--                       -->
-        <!-- LEFT COLUMN - FILTERS -->
-        <div class="govuk-grid-column-one-third">
+          <!--            -->
+          <!--            -->
+          <!-- INSET TEXT -->
+          <div class="govuk-grid-column-full govuk-!-margin-bottom-4">
 
-          <!--                 -->
-          <!--                 -->
-          <!-- KEY WORD SEARCH -->
-          <div style="background-color: #f3f2f1;padding:15px 15px 1px 15px;margin-bottom:30px">
-            <h3 class="govuk-heading-m">Keyword</h3>
-            <p class="govuk-body-s">Search titles, descriptions, identifiers and organisation names</p>
-
-            <details class="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text" style="font-size:16px">
-                  Help with keyword search
-                </span>
-              </summary>
-              <div class="govuk-details__text" style="padding-bottom:1px">
-                <ul class="govuk-list govuk-list--bullet" style="font-size:16px">
-                  <li>To search for any word, put a space between words. For example, <i>radio television</i></li>
-                  <li>To search for all words, put a + between words. For example, <i>administration + defence</i></li>
-                  <li>To search for an exact phrase, use quotes. For example, <i>"market research"</i></li>
-                </ul>
-              </div>
-            </details>
-
-            <div class="govuk-form-group">
-              <input class="govuk-input" id="key-word-search" name="keyWordSearch" type="text">
+            <div class="govuk-inset-text">
+              <p class="govuk-body">The Register of Commercial Tools allows you to search for frameworks and dynamic markets.</p>
+              </details>
             </div>
 
           </div>
 
-          <!--             -->
-          <!--             -->
-          <!-- FILTERS CSS -->
-          <style>
-            /* Style the buttons that are used to open and close the accordion panel */
-            .accordion {
-              background-color: #f3f2f1;
-              color: ##;
-              cursor: pointer;
-              padding: 18px;
-              width: 100%;
-              text-align: left;
-              border: none;
-              outline: none;
-              transition: 0.4s;
-              padding-left: 40px;
-            }
-            .accordion:before{
-                content: '';
-                display:block;
-                background:url('/public/images/icon-expand.svg');
-                position:absolute;
-                width:24px;
-                height:24px;
-                margin-left:-30px;
-            }
+          <!--                             -->
+          <!--                             -->
+          <!-- RESULTS HEADER (FULL WIDTH) -->
+          <div class="govuk-grid-column-one-half">
+            <h1 class="govuk-heading-l" style="margin-bottom: 10px;">Search Results</h1>
+            <p class="govuk-body-m" style="margin-bottom: 15px;">
+              {% set org_count = data['organisations'] | length %}
+              We've found <span class="govuk-!-font-weight-bold">{{ org_count * 3 }}</span> results
+            </p>
+          </div>
 
-            /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-            .active, .accordion:hover {
-              /*background-color: #ccc;*/
-            }
+          <!--                           -->
+          <!--                           -->
+          <!-- SELECT WITH VIEW SELECTOR -->
+          <div class="govuk-grid-column-one-half" style="text-align: right;padding-right:0">
+            <div class="govuk-form-group">
+            <label class="govuk-label govuk-!-font-weight-bold" for="sort" style="padding-right:118px">Sort results</label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="views" selected>Relevance</option>
+                <option value="published">Alphabetical (A-Z)</option>
+                <option value="updated">Alphabetical (Z-A)</option>
+              </select>
+            </div>
+          </div>
+                
+          <!--                         -->
+          <!--                         -->
+          <!-- LIST STARTS (2-COLUMNS) -->
 
-            /* Style the accordion panel. Note: hidden by default */
-            .panel {
-              padding: 0 20px 0 20px;
-              background-color: #f3f2f1	;
-              display: none;
-              overflow: hidden;
-              margin-top: -20px;
-            }
-            .inner-panel {
-              background-color:#ffffff;
-              /*border-bottom:solid 4px #f3f2f1;*/
-            }
-            .govuk-checkboxes__label {
-              font-size:16px;
-            }
-          </style>
+          <div class="govuk-grid-row">
 
-          <!--                        -->
-          <!--                        -->
-          <!-- COMMERCIAL TOOL STATUS -->
-          <button class="accordion govuk-body govuk-!-font-weight-bold">Commercial tool</button>
-          <div class="panel govuk-!-margin-bottom-4">
+            <!--                       -->
+            <!--                       -->
+            <!-- LEFT COLUMN - FILTERS -->
+            <div class="govuk-grid-column-one-third">
 
-            <details class="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text" style="font-size:16px">
-                  Definitions
-                </span>
-              </summary>
-              <div class="govuk-details__text" style="padding-bottom:1px">
-                <ul class="govuk-list govuk-list--bullet" style="font-size:16px">
-                  <li><b>Framework</b> - A contract that allows the award of future contracts, which will be advertised only to suppliers on the framework.</li>
-                  <li><b></b>Dynamic market</b> - Arrangements that suppliers who meet the conditions for membership can join, which allow them to bid for future contracts restricted to members of the market. Future contracts must be advertised in tender notices. New suppliers can join at any time during the term of the market.</li>
-                  <li><b>Utilities dynamic market</b> - A dynamic market that can only be used by utility organisations to award utilities contracts. Tender notices may optionally be provided only to members of the market. (Not included in the DM/DPS filter option).</li>
-                </ul>
+              <!--                 -->
+              <!--                 -->
+              <!-- KEY WORD SEARCH -->
+              <div class="govuk-!-margin-bottom-5" style="background-color: #f3f2f1;padding:15px 15px 1px 15px">
+                <h3 class="govuk-heading-m">Keyword</h3>
+                <p class="govuk-body-s">Search titles, descriptions, identifiers and organisation names</p>
+
+                <details class="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text" style="font-size:16px">
+                      Help with keyword search
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text" style="padding-bottom:1px">
+                    <ul class="govuk-list govuk-list--bullet" style="font-size:16px">
+                      <li>To search for any word, put a space between words. For example, <i>radio television</i></li>
+                      <li>To search for all words, put a + between words. For example, <i>administration + defence</i></li>
+                      <li>To search for an exact phrase, use quotes. For example, <i>"market research"</i></li>
+                    </ul>
+                  </div>
+                </details>
+
+                <div class="govuk-form-group">
+                  <input class="govuk-input" id="key-word-search" name="keyWordSearch" type="text">
+                </div>
+
               </div>
-            </details>
-            
-            <details class="govuk-details" style="background:#fff;padding:5px">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text" style="font-size:16px">
-                  Procurement act 2026
-                </span>
-              </summary>
-              <div class="govuk-details__text" style="padding-bottom:1px; border-left:none;padding-left:0;padding-right:0;margin-right:0;margin-left:-5px">
 
-                <div class="govuk-form-group" >
+              <!--             -->
+              <!--             -->
+              <!-- FILTERS CSS -->
+              <style>
+                /* Style the buttons that are used to open and close the accordion panel */
+                .accordion {
+                  background-color: #f3f2f1;
+                  color: ##;
+                  cursor: pointer;
+                  padding: 18px;
+                  width: 100%;
+                  text-align: left;
+                  border: none;
+                  outline: none;
+                  transition: 0.4s;
+                  padding-left: 40px;
+                }
+                .accordion:before{
+                    content: '';
+                    display:block;
+                    background:url('/public/images/icon-expand.svg');
+                    position:absolute;
+                    width:24px;
+                    height:24px;
+                    margin-left:-30px;
+                }
+
+                /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+                .active, .accordion:hover {
+                  /*background-color: #ccc;*/
+                }
+
+                /* Style the accordion panel. Note: hidden by default */
+                .panel {
+                  padding: 0 20px 0 20px;
+                  background-color: #f3f2f1	;
+                  display: none;
+                  overflow: hidden;
+                  margin-top: -20px;
+                }
+                .inner-panel {
+                  background-color:#ffffff;
+                  /*border-bottom:solid 4px #f3f2f1;*/
+                }
+                .govuk-checkboxes__label {
+                  font-size:16px;
+                }
+              </style>
+
+              <!--                 -->
+              <!--                 -->
+              <!-- COMMERCIAL TOOL -->
+              <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Commercial tool</button>
+              <div class="panel govuk-!-margin-bottom-1">
+
+                <details class="govuk-details" style="padding-left:10px;margin-top:15px;margin-bottom:20px">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text" style="font-size:16px">
+                      Definitions
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text" style="padding-bottom:1px">
+                    <ul class="govuk-list govuk-list--bullet" style="font-size:16px">
+                      <li><b>Framework</b> - A contract that allows the award of future contracts, which will be advertised only to suppliers on the framework.</li>
+                      <li><b></b>Dynamic market</b> - Arrangements that suppliers who meet the conditions for membership can join, which allow them to bid for future contracts restricted to members of the market. Future contracts must be advertised in tender notices. New suppliers can join at any time during the term of the market.</li>
+                      <li><b>Utilities dynamic market</b> - A dynamic market that can only be used by utility organisations to award utilities contracts. Tender notices may optionally be provided only to members of the market. (Not included in the DM/DPS filter option).</li>
+                    </ul>
+                  </div>
+                </details>
+                
+                <details class="govuk-details" style="background:#fff;padding:5px 5px 7px 10px">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text" style="font-size:16px">
+                      Procurement act 2026
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text" style="padding-bottom:1px; border-left:none;padding-left:0;padding-right:0;margin-right:0;margin-left:-5px">
+
+                    <div class="govuk-form-group" >
+                      <fieldset class="govuk-fieldset">
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+
+                          <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
+                            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                            <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                              Upcoming
+                            </label>
+                          </div>
+
+                          <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
+
+                          <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
+                            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                              Active available to buyer
+                            </label>
+                          </div>
+
+                          <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
+
+                          <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;white-space: nowrap;">
+                            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                              Active accepting suppliers
+                            </label>
+                          </div>
+
+                          <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
+
+                          <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
+                            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                              Expired
+                            </label>
+                          </div>
+
+                        </div>
+                      </fieldset>
+                    </div>
+
+                  </div>
+                </details>
+
+              </div>
+
+              <!--                        -->
+              <!--                        -->
+              <!-- COMMERCIAL TOOL STATUS -->
+              <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Commercial tool status</button>
+              <div class="panel govuk-!-margin-bottom-1">
+                <div class="govuk-form-group" style="margin-bottom:20px">
                   <fieldset class="govuk-fieldset">
                     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
 
@@ -224,7 +283,7 @@
 
                       <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
 
-                      <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;white-space: nowrap;">
+                      <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
                         <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
                           Active accepting suppliers
@@ -243,207 +302,448 @@
                     </div>
                   </fieldset>
                 </div>
+              </div>
+
+              <!--                   -->
+              <!--                   -->
+              <!-- CONTRACT LOCATION -->
+              <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Contract location</button>
+              <div class="panel govuk-!-margin-bottom-1">
+
+                <div style="background:#fff;padding:10px 10px 0 10px">
+                  <p class="govuk-body-s" style="padding-top:15px;padding-bottom:10px"><a href="#">Select regions</a></p>
+                </div>
 
               </div>
-            </details>
 
-          </div>
+              <!--                            -->
+              <!--                            -->
+              <!-- CONTRACING AUTHORITY USAGE -->
+              <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Contracting authority usage</button>
+              <div class="panel govuk-!-margin-bottom-1">
+                <div class="govuk-form-group" style="margin-bottom:20px">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
 
-          <!--                        -->
-          <!--                        -->
-          <!-- COMMERCIAL TOOL STATUS -->
-          <button class="accordion govuk-body govuk-!-font-weight-bold">Commercial tool status</button>
-          <div class="panel govuk-!-margin-bottom-6">
-            <div class="govuk-form-group" style="margin-bottom:20px">
-              <fieldset class="govuk-fieldset">
-                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Can be used by other contracting authorities
+                        </label>
+                      </div>
 
-                  <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
-                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                      Upcoming
+                      <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
+
+                      <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
+                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                          Cannot be used by other contracting authorities
+                        </label>
+                      </div>
+
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+
+              <!--              -->
+              <!--              -->
+              <!-- AWARD METHOD -->
+              <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Award method</button>
+              <div class="panel govuk-!-margin-bottom-1">
+                <div class="govuk-form-group" style="margin-bottom:20px">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+
+                      <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          With competition
+                        </label>
+                      </div>
+
+                      <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
+
+                      <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
+                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                          Without competition
+                        </label>
+                      </div>
+
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+
+              <!--          -->
+              <!--          -->
+              <!-- CPV code -->    
+              <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">CPV code</button>
+              <div class="panel govuk-!-margin-bottom-1">
+
+                <p class="govuk-body-s">The common procurement vocabulary (CPV) is used to classify contracts in a standardised way</p>
+
+                <div style="background:#fff;padding:10px 10px 0 10px">
+                  <p class="govuk-body-s" style="padding-bottom:10px"><a href="#">Browse CPV codes</a></p>
+                </div>
+
+              </div>
+
+              <!--      -->
+              <!--      -->
+              <!-- Fees -->    
+              <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Fees</button>
+              <div class="panel govuk-!-margin-bottom-1">
+
+                <p class="govuk-body-s">Maximum percentage fees charged to suppliers</p>
+
+                <div style="background:#fff;padding:10px 10px 0 10px">
+
+                  <div class="govuk-form-group">
+
+                    <label class="govuk-label" for="weight" style="font-size:16px">
+                      From
                     </label>
-                  </div>
+                    <div class="govuk-input__wrapper">
+                      <input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" style="font-size:16px">
+                      <div class="govuk-input__suffix" aria-hidden="true" style="font-size:16px">%</div>
+                    </div>
 
-                  <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
-
-                  <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
-                    <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                      Active available to buyer
+                    <label class="govuk-label" for="weight" style="font-size:16px;margin-top:10px">
+                      To
                     </label>
-                  </div>
+                    <div class="govuk-input__wrapper">
+                      <input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" style="font-size:16px">
+                      <div class="govuk-input__suffix" aria-hidden="true" style="font-size:16px">%</div>
+                    </div>
 
-                  <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
-
-                  <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
-                    <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                      Active accepting suppliers
+                    <label class="govuk-label" for="weight" style="font-size:16px;margin-top:10px">
+                      Or
                     </label>
-                  </div>
 
-                  <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
-
-                  <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
-                    <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                      Expired
-                    </label>
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste">
+                              No fees
+                            </label>
+                          </div>
+                        </div>
+                    
                   </div>
 
                 </div>
-              </fieldset>
-            </div>
-          </div>
 
-
-
-
-
-
-          <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-            
-            for (i = 0; i < acc.length; i++) {
-              acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                  panel.style.display = "none";
-                } else {
-                  panel.style.display = "block";
-                }
-              });
-            }
-          </script>
-
-          <div style="margin-top:15px; margin-bottom:-15px">
-            <button type="submit" class="govuk-button" data-module="govuk-button">
-              Update results
-            </button>
-          </div>
-
-          <div style="margin-bottom:-15px">
-            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Reset
-            </button>
-          </div>
-
-        </div>
-
-        <!-- RIGHT COLUMN -->
-        <div class="govuk-grid-column-two-thirds">
-
-          <!--                -->
-          <!--                -->
-          <!-- RESULTS HEADER -->
-          <!--
-          <div class="govuk-grid-row">
-
-            <div class="govuk-grid-column-one-half">
-              <h1 class="govuk-heading-l">Results</h1>
-            </div>
-  
-            <div class="govuk-grid-column-one-half" style="text-align: right;">
-
-              <img src="/public/images/grid_view-active.svg" alt="Showing grid view of results" style="float:left; margin-right:20px;padding-top:8px">
-
-              <img src="/public/images/list_view-inactive.svg" alt="Showing grid view of results" style="float:left;padding-top:8px">
-
-              <div class="govuk-form-group" style="padding-left:90px">
-                <select class="govuk-select" id="sort" name="sort">
-                  <option value="published" selected>Sort results A-Z</option>
-                  <option value="updated">xxx</option>
-                  <option value="views">xxx</option>
-                  <option value="comments">xxx</option>
-                </select>
               </div>
 
-            </div>
-            
-          </div>
+              <!--            -->
+              <!--            -->
+              <!-- Date range -->    
+              <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-2">Date range</button>
+              <div class="panel govuk-!-margin-bottom-5">
 
-          <div class="govuk-grid-row">
+                <p class="govuk-body-s">Commercial tools which were active or expired within a date range (searches submission deadline, contract start/end date, open framework end date and start/end date of the DM)</p>
 
-            <div class="govuk-grid-column-full" style="margin-top: -20px;margin-bottom:30px">
-              {% set org_count = data['organisations'] | length %}
-              <p class="govuk-body"><span class="govuk-!-font-weight-bold">{{ org_count }}</span> organisations</p>
-            </div>
+                <details class="govuk-details" style="background:#fff;padding:5px;margin-bottom:20px">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text" style="font-size:16px">
+                      Submission deadline
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text" style="padding-bottom:1px; border-left:none;padding-left:0;padding-right:0;margin-right:0;margin-left:-5px">
+
+                  <div class="govuk-form-group" style="padding:10px">
+
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                      <legend class="govuk-fieldset__legend" style="font-size:16px">
+                        From
+                      </legend>
+                      <div id="passport-issued-hint" class="govuk-hint" style="font-size:16px;margin-bottom:5px">
+                        For example, 25 05 2025
+                      </div>
+                      <div class="govuk-date-input" id="passport-issued">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day" style="font-size:16px">
+                              Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" style="font-size:16px">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month" style="font-size:16px">
+                              Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" style="font-size:16px">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year" style="font-size:16px">
+                              Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" style="font-size:16px">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                      <legend class="govuk-fieldset__legend" style="font-size:16px;padding-top:20px;margin-bottom:5px">
+                        To
+                      </legend>
+                      <div class="govuk-date-input" id="passport-issued">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day" style="font-size:16px">
+                              Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" style="font-size:16px">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month" style="font-size:16px">
+                              Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" style="font-size:16px">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year" style="font-size:16px">
+                              Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" style="font-size:16px">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+
+                  </div>       
+
+                  </div>
+                </details>
+
+                <details class="govuk-details" style="background:#fff;padding:5px">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text" style="font-size:16px">
+                      Commercial tool dates
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text" style="padding-bottom:1px; border-left:none;padding-left:0;padding-right:0;margin-right:0;margin-left:-5px">
+
+                  <div class="govuk-form-group" style="padding:10px">
+
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                      <legend class="govuk-fieldset__legend" style="font-size:16px">
+                        From
+                      </legend>
+                      <div id="passport-issued-hint" class="govuk-hint" style="font-size:16px;margin-bottom:5px">
+                        For example, 25 05 2025
+                      </div>
+                      <div class="govuk-date-input" id="passport-issued">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day" style="font-size:16px">
+                              Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" style="font-size:16px">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month" style="font-size:16px">
+                              Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" style="font-size:16px">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year" style="font-size:16px">
+                              Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" style="font-size:16px">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                      <legend class="govuk-fieldset__legend" style="font-size:16px;padding-top:20px;margin-bottom:5px">
+                        To
+                      </legend>
+                      <div class="govuk-date-input" id="passport-issued">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day" style="font-size:16px">
+                              Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" style="font-size:16px">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month" style="font-size:16px">
+                              Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" style="font-size:16px">
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year" style="font-size:16px">
+                              Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" style="font-size:16px">
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+
+                  </div>       
+
+                  </div>
+                </details>
+
+              </div>
+
+
+
+
+              <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
                 
-          </div>
-          -->
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                      panel.style.display = "none";
+                    } else {
+                      panel.style.display = "block";
+                    }
+                  });
+                }
+              </script>
 
-          <!--              -->
-          <!--              -->
-          <!-- RESULTS LIST -->
-          {% for org in data['organisations'] %}
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-two-thirds">
-                <h2 class="govuk-heading-m"><a href={{ org.url }}>{{org.name}}</a></h2>
+              <div style="margin-top:15px; margin-bottom:-15px">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                  Update results
+                </button>
               </div>
-              <div class="govuk-grid-column-one-third">
-                <div class="govuk-grid-row" style="text-align: right;margin-right:0">
-                  <strong class="govuk-tag govuk-tag--turquoise">
-                    {{org.tag}}
-                  </strong>
+
+              <div style="margin-bottom:-15px">
+                <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  Reset
+                </button>
+              </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="govuk-grid-column-two-thirds">
+
+              <!--              -->
+              <!--              -->
+              <!-- RESULTS LIST -->
+              {% for org in data['ROTCresults'] %}
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-two-thirds">
+                    <h2 class="govuk-heading-m"><a href="#">{{org.name}}</a></h2>
+                    <p class="govuk-caption-m" style="margin-top:-15px">{{org.type}}</p>
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                    <div class="govuk-grid-row" style="text-align: right;margin-right:0">
+                      {% if org.tag == "Active" %}
+                        <strong class="govuk-tag govuk-tag--turquoise">
+                          {{org.tag}}
+                        </strong>
+                      {% elseif org.tag == "Upcoming" %}
+                        <strong class="govuk-tag govuk-tag--yellow">
+                          {{org.tag}}
+                        </strong>
+                      {% else %}
+                        <strong class="govuk-tag govuk-tag--red">
+                          {{org.tag}}
+                        </strong>
+                      {% endif %}
+                    </div>
+                  </div>
                 </div>
-              </div>
+
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-full">
+                    <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold govuk-!-padding-top-4">Commercial tool</span>&nbsp;  {{org.commercial_tool}}</p>
+                    <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">Status</span>&nbsp; {{org.status}}</p>
+                    <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">Maximum fee</span>&nbsp; {{org.maximum_fee}}</p>
+                    <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">Other contracting authority can use</span>&nbsp; {{org.other_contracting_authority_can_use}}</p>
+                    <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">Submission deadline</span>&nbsp; {{org.submission_deadline}}</p>
+                    <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">Contract dates</span>&nbsp; {{org.contract_dates}}</p>
+                    <p class="govuk-body"><span class="govuk-!-font-weight-bold">Aware method</span>&nbsp; {{org.award_method}}</p>
+
+
+                    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                  </div>
+                </div>
+              {% endfor %}
+
+              <!--            -->
+              <!--            -->
+              <!-- PAGINATION -->
+              <nav class="govuk-pagination" aria-label="Pagination">
+                <ul class="govuk-pagination__list">
+                  <li class="govuk-pagination__item govuk-pagination__item--current">
+                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+                      1
+                    </a>
+                  </li>
+                  <li class="govuk-pagination__item">
+                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+                      2
+                    </a>
+                  </li>
+                  <li class="govuk-pagination__item">
+                    <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                      3
+                    </a>
+                  </li>
+                </ul>
+                <div class="govuk-pagination__next">
+                  <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+                    <span class="govuk-pagination__link-title">
+                      Next<span class="govuk-visually-hidden"> page</span>
+                    </span>
+                    <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                      <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </nav>
+
             </div>
-
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-full">
-                <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold govuk-!-padding-top-4">Organisation type</span>&nbsp;  {{org.org_type}}</p>
-                <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">PPON number</span>&nbsp; {{org.PPON_number}}</p>
-                <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">PPON registration date</span>&nbsp; {{ org.date_of_registration}}</p>
-                <p class="govuk-body"><span class="govuk-!-font-weight-bold">Organisation address</span>&nbsp; {{ org.address}}</p>
-
-
-                <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-              </div>
-            </div>
-          {% endfor %}
-
-          <!--            -->
-          <!--            -->
-          <!-- PAGINATION -->
-          <nav class="govuk-pagination" aria-label="Pagination">
-            <ul class="govuk-pagination__list">
-              <li class="govuk-pagination__item govuk-pagination__item--current">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
-                  1
-                </a>
-              </li>
-              <li class="govuk-pagination__item">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
-                  2
-                </a>
-              </li>
-              <li class="govuk-pagination__item">
-                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
-                  3
-                </a>
-              </li>
-            </ul>
-            <div class="govuk-pagination__next">
-              <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-                <span class="govuk-pagination__link-title">
-                  Next<span class="govuk-visually-hidden"> page</span>
-                </span>
-                <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                  <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-                </svg>
-              </a>
-            </div>
-          </nav>
+            
+          </div>
 
         </div>
-        
       </div>
 
     </div>
-  </div>
+    
+  </main>
+</div>
+
+
+
+
+
+
+
+
       
 {% endblock %}
