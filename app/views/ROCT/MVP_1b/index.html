@@ -118,9 +118,9 @@
                   </summary>
                   <div class="govuk-details__text" style="padding-bottom:1px">
                     <ul class="govuk-list govuk-list--bullet" style="font-size:16px">
-                      <li>To search for any word, put a space between words. For example, <i>radio television</i></li>
-                      <li>To search for all words, put a + between words. For example, <i>administration + defence</i></li>
-                      <li>To search for an exact phrase, use quotes. For example, <i>"market research"</i></li>
+                      <li>To search for <b>any</b> word, put a <b>space</b> between words. For example, <b><i>radio television</i></b></li>
+                      <li>To search for <b>all</b> words, put a + between words. For example, <b><i>administration + defence</i></b></li>
+                      <li>To search for an <b>exact</b> phrase, use <b>quotes</b>. For example, <b><i>"market research"</i></b></li>
                     </ul>
                   </div>
                 </details>
@@ -186,6 +186,7 @@
               <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Commercial tool</button>
               <div class="panel govuk-!-margin-bottom-1">
 
+                <p class="govuk-body-s govuk-!-margin-top-3">Search for commercial tools being established, modified or terminated</p>
                 <details class="govuk-details" style="padding-left:10px;margin-top:15px;margin-bottom:20px">
                   <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text" style="font-size:16px">
@@ -195,7 +196,7 @@
                   <div class="govuk-details__text" style="padding-bottom:1px">
                     <ul class="govuk-list govuk-list--bullet" style="font-size:16px">
                       <li><b>Framework</b> - A contract that allows the award of future contracts, which will be advertised only to suppliers on the framework.</li>
-                      <li><b></b>Dynamic market</b> - Arrangements that suppliers who meet the conditions for membership can join, which allow them to bid for future contracts restricted to members of the market. Future contracts must be advertised in tender notices. New suppliers can join at any time during the term of the market.</li>
+                      <li><b>Dynamic market</b> - Arrangements that suppliers who meet the conditions for membership can join, which allow them to bid for future contracts restricted to members of the market. Future contracts must be advertised in tender notices. New suppliers can join at any time during the term of the market.</li>
                       <li><b>Utilities dynamic market</b> - A dynamic market that can only be used by utility organisations to award utilities contracts. Tender notices may optionally be provided only to members of the market. (Not included in the DM/DPS filter option).</li>
                     </ul>
                   </div>
@@ -204,7 +205,7 @@
                 <details class="govuk-details" style="background:#fff;padding:5px 5px 7px 10px">
                   <summary class="govuk-details__summary">
                     <span class="govuk-details__summary-text" style="font-size:16px">
-                      Procurement act 2023
+                      Procurement Act 2023
                     </span>
                   </summary>
                   <div class="govuk-details__text" style="padding-bottom:1px; border-left:none;padding-left:0;padding-right:0;margin-right:0;margin-left:-5px">
@@ -216,16 +217,25 @@
                           <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
                             <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
                             <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                              Upcoming
+                              Frameworks
                             </label>
                           </div>
 
                           <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
 
-                          <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
+                          <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;margin-left:20px">
                             <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
                             <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                              Active - Available to buyer
+                              Open frameworks only
+                            </label>
+                          </div>
+
+                          <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
+
+                          <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;margin-left:20px">
+                            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                              Exclude open frameworks
                             </label>
                           </div>
 
@@ -234,16 +244,25 @@
                           <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;white-space: nowrap;">
                             <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
                             <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                              Active - Accepting suppliers
+                              Dynamic markets
                             </label>
                           </div>
 
                           <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
 
-                          <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
+                          <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;;margin-left:20px">
                             <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
                             <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                              Expired
+                              Utilities dynamic markets only
+                            </label>
+                          </div>
+
+                          <hr class="govuk-section-break govuk-section-break--visible" style="border-color:#f3f2f1;border-width:2px">
+
+                          <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;;margin-left:20px">
+                            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                              Exclude utilities dynamic markets
                             </label>
                           </div>
 
@@ -260,7 +279,7 @@
               <!--                        -->
               <!-- COMMERCIAL TOOL STATUS -->
               <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Commercial tool status</button>
-              <div class="panel govuk-!-margin-bottom-1">
+              <div class="panel govuk-!-padding-top-3 govuk-!-margin-bottom-1">
                 <div class="govuk-form-group" style="margin-bottom:20px">
                   <fieldset class="govuk-fieldset">
                     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
@@ -277,7 +296,7 @@
                       <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
                         <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                          Active available to buyer
+                          Active - available to buyer
                         </label>
                       </div>
 
@@ -286,7 +305,7 @@
                       <div class="inner-panel govuk-checkboxes__item" style="border-color: transparent;border-style: solid;border-width: 0 0 0 11px;">
                         <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                          Active accepting suppliers
+                          Active - accepting suppliers
                         </label>
                       </div>
 
@@ -320,7 +339,7 @@
               <!--                            -->
               <!-- CONTRACING AUTHORITY USAGE -->
               <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Contracting authority usage</button>
-              <div class="panel govuk-!-margin-bottom-1">
+              <div class="panel govuk-!-padding-top-3 govuk-!-margin-bottom-1">
                 <div class="govuk-form-group" style="margin-bottom:20px">
                   <fieldset class="govuk-fieldset">
                     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
@@ -350,7 +369,7 @@
               <!--              -->
               <!-- AWARD METHOD -->
               <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Award method</button>
-              <div class="panel govuk-!-margin-bottom-1">
+              <div class="panel govuk-!-padding-top-3 govuk-!-margin-bottom-1">
                 <div class="govuk-form-group" style="margin-bottom:20px">
                   <fieldset class="govuk-fieldset">
                     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
@@ -380,7 +399,7 @@
               <!--          -->
               <!-- CPV code -->    
               <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">CPV code</button>
-              <div class="panel govuk-!-margin-bottom-1">
+              <div class="panel govuk-!-padding-top-2 govuk-!-margin-bottom-1">
 
                 <p class="govuk-body-s">The common procurement vocabulary (CPV) is used to classify contracts in a standardised way</p>
 
@@ -394,7 +413,7 @@
               <!--      -->
               <!-- Fees -->    
               <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Fees</button>
-              <div class="panel govuk-!-margin-bottom-1">
+              <div class="panel govuk-!-padding-top-2 govuk-!-margin-bottom-1">
 
                 <p class="govuk-body-s">Maximum percentage fees charged to suppliers</p>
 
@@ -440,8 +459,8 @@
               <!--            -->
               <!--            -->
               <!-- Date range -->    
-              <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-2">Date range</button>
-              <div class="panel govuk-!-margin-bottom-5">
+              <button class="accordion govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-1">Date range</button>
+              <div class="panel govuk-!-padding-top-3 govuk-!-margin-bottom-5">
 
                 <p class="govuk-body-s">Commercial tools which were active or expired within a date range (searches submission deadline, contract start/end date, open framework end date and start/end date of the DM)</p>
 

@@ -38,7 +38,7 @@
       <!-- BLUE PAGE HEADER -->
       <h1 class="govuk-heading-l govuk-!-margin-bottom-3">Public procurement organisation number register</h1>
       
-      <p class="govuk-body" style="margin-bottom:5px">Search by organisation name or PPON number</p>
+      <p class="govuk-body" style="margin-bottom:5px">Search by organisation name or PPON</p>
 
       <style>
         #wrapper {
@@ -159,7 +159,8 @@
           </span>
         </summary>
         <div class="govuk-details__text">
-          A PPON is a unique identifier assigned to organisations that participate in public procurement, generated when an organisation registers on the <a href="">Supplier Registration service (opens in a new tab)</a>. It is used to manage and publish notices related to public procurement and connects information about the organisation digitally.
+      <p class="govuk-body">A PPON is a unique identifier assigned to organisations that participate in public procurement, generated when an organisation registers on the <a href="#">Supplier Registration service (opens in a new tab)</a>. It is used to manage and publish notices related to public procurement and connects information about the organisation digitally.</p>
+      <p class="govuk-body">Your PPON is a combination of 16 letters and numbers, separated by hyphens. For example, AAAA-AAAA-1111-AAAA.</p>
         </div>
       </details>
 
@@ -236,7 +237,7 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold govuk-!-padding-top-4">Organisation type</span>&nbsp;  {{org.org_type}}</p>
-            <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">PPON number</span>&nbsp; {{org.PPON_number}}</p>
+            <p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">PPON</span>&nbsp; {{org.PPON_number}}</p>
             <!--<p class="govuk-body govuk-!-margin-bottom-1"><span class="govuk-!-font-weight-bold">PPON registration date</span>&nbsp; {{ org.date_of_registration}}</p>-->
             <p class="govuk-body"><span class="govuk-!-font-weight-bold">Organisation address</span>&nbsp; {{ org.address}}</p>
           </div>

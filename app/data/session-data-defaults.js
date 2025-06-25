@@ -89,7 +89,7 @@ module.exports = {
   "ROTCresults": [
     {
       name: "Provision of Scanning Equipment Maintenance",
-      type: "Contracting authority",
+      type: "Driver & Vehicle Licensing Agency",
       tag: "Active",
       commercial_tool: "Open framework scheme",
       status: "Applications window is open",
@@ -101,7 +101,7 @@ module.exports = {
     },
     {
       name: "UVDB Powered by Achilles QUDM for Goods, Works and Services",
-      type: "Contracting authority",
+      type: "AFFINITY WATER LIMITED; CADENT GAS LIMITED; SOUTH WEST WATER LIMITED; NORTHERN GAS NETWORKS LIMITED; NORTHERN IRELAND ELECTRICITY NETWORKS LIMITED; and 27 more",
       tag: "Upcoming",
       commercial_tool: "Dynamic market",
       status: "Applications window opening soon",
@@ -113,7 +113,7 @@ module.exports = {
     },
     {
       name: "Marketing & Communications Services Fully Integrated Marketing, PR & Public Services",
-      type: "Contracting authority",
+      type: "The City of Liverpool College",
       tag: "Expired",
       commercial_tool: "Open framework scheme",
       status: "Applications window has closed",
