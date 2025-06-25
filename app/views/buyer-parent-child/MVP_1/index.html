@@ -48,11 +48,6 @@
                 <td class="govuk-table__cell govuk-table__cell--numeric">&nbsp</td>
               </tr>-->
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Registry and number</th>
-                <td class="govuk-table__cell">{{org.registry}}<br>{{org.registry_number}} 73992884</td>
-                <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Change</a></td>
-              </tr>
-              <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Organisation name</th>
                 <td class="govuk-table__cell">{{org.name}}</td>
                 <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Change</a></td>
@@ -70,6 +65,11 @@
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Organisation type</th>
                 <td class="govuk-table__cell">{{org.organisation_type}}</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Change</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Registry and number</th>
+                <td class="govuk-table__cell">{{org.registry}}<br>{{org.registry_number}} 73992884</td>
                 <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Change</a></td>
               </tr>
               <tr class="govuk-table__row">
@@ -106,7 +106,9 @@
                 </span>
               </summary>
               <div class="govuk-details__text govuk-body-s">
-                Text to be confirmed.
+                  <p class="govuk-body-s">A PPON is a unique identifier assigned to organisations that participate in public procurement, generated when an organisation registers on the <a href="#">Supplier Registration service (opens in a new tab)</a>. It is used to manage and publish notices related to public procurement and connects information about the organisation digitally.</p>
+
+                   <p class="govuk-body-s">Your PPON is a combination of 16 letters and numbers, separated by hyphens. For example, ABCD-EFGH-1234-IJKL.</p>
               </div>
             </details>
           </div>
