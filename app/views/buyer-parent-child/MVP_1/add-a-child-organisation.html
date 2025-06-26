@@ -37,18 +37,15 @@
 
           <h1 class="govuk-heading-l">Search for your child organisation</h1>
 
+            <h1 class="govuk-heading-s govuk-!-margin-bottom-1">Enter the name or PPON of your child organisation</h1>
+            <p class="govuk-body govuk-!-margin-bottom-7" style="color:#505a5f">
+              You can only add an immediate child organisation, which is the next level down in your organisation's hierarchy. If you do not know the child organisation's public procurement organisation number (PPON), you can find it on the <a href="#">Search Registry of PPON (opens in a new tab)</a>.
+            </p>
+
           <div class="govuk-form-group">
-            <h1 class="govuk-label-wrapper">
-              <label class="govuk-label govuk-label--s" for="event-name">
-                Enter the name or PPON of your child organisation
-              </label>
-            </h1>
-            <div id="event-name-hint" class="govuk-hint">
-              You can only add an immediate child organisation, which is the next level down in your organisation's hierarchy. If you do not know the child organisation's PPON, you can find it on the <a href="#">Search Registry of PPON (opens in a new tab)</a>.
-            </div>
-          <form class="form" action="search-results" method="post">
-            <input class="govuk-input govuk-input--width-20" id="width-20" name="search-query" type="text"><button class="govuk-button" data-module="govuk-button">Search</button>
-          </form>
+            <form class="form" action="search-results" method="post">
+              <input class="govuk-input govuk-input--width-20" id="width-20" name="search-query" type="text"><button class="govuk-button" data-module="govuk-button">Search</button>
+            </form>
           </div>
 
           <!--<p class="govuk-body govuk-!-margin-top-4">If you do not know the child organisation's PPON, you can find it on the <a href="#">Search Registry of PPON (opens in a new tab)</a>.</p>-->
