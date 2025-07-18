@@ -89,6 +89,7 @@ module.exports = {
   "ROTCresults": [
     {
       name: "Provision of Scanning Equipment Maintenance",
+      url: "https://www.find-tender.service.gov.uk/procurement/ocds-h6vhtk-03bc65",
       type: "Driver & Vehicle Licensing Agency",
       tag: "Active",
       commercial_tool: "Open framework scheme",
@@ -101,6 +102,7 @@ module.exports = {
     },
     {
       name: "UVDB Powered by Achilles QUDM for Goods, Works and Services",
+      url: "https://www.find-tender.service.gov.uk/procurement/ocds-h6vhtk-04e7a8",
       type: "AFFINITY WATER LIMITED; CADENT GAS LIMITED; SOUTH WEST WATER LIMITED; NORTHERN GAS NETWORKS LIMITED; NORTHERN IRELAND ELECTRICITY NETWORKS LIMITED; and 27 more",
       tag: "Upcoming",
       commercial_tool: "Dynamic market",
@@ -113,6 +115,7 @@ module.exports = {
     },
     {
       name: "Marketing & Communications Services Fully Integrated Marketing, PR & Public Services",
+      url: "https://www.find-tender.service.gov.uk/procurement/ocds-h6vhtk-04ee70",
       type: "The City of Liverpool College",
       tag: "Expired",
       commercial_tool: "Open framework scheme",
